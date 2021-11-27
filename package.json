@@ -1,0 +1,50 @@
+{
+    "name": "cryptocons",
+    "version": "1.0.0",
+    "description": "Cryptocurrency logos as tidy SVG components.",
+    "keywords": [
+        "react",
+        "icon",
+        "svg"
+    ],
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build:npm": "rollup -c",
+        "build:exports": "ts-node bin/build-exports.ts",
+        "build:storybook": "build-storybook -o public",
+        "format": "prettier --write .",
+        "storybook": "start-storybook -p 6006",
+        "svgo": "svgo --config -f svgs"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "author": "Ross Moody <ross@rossmoody.com.com>",
+    "license": "MIT",
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^21.0.1",
+        "@rollup/plugin-node-resolve": "^13.0.6",
+        "@rollup/plugin-typescript": "^8.3.0",
+        "@storybook/addon-actions": "^6.3.12",
+        "@storybook/addon-essentials": "^6.3.12",
+        "@storybook/addon-links": "^6.3.12",
+        "@storybook/react": "^6.3.12",
+        "@types/node": "^16.11.9",
+        "@types/react": "^17.0.35",
+        "@types/styled-components": "^5.1.15",
+        "prettier": "^2.4.1",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "rollup": "^2.60.0",
+        "rollup-plugin-dts": "^4.0.1",
+        "rollup-plugin-peer-deps-external": "^2.2.4",
+        "styled-components": "^5.3.3",
+        "svgo": "^2.8.0",
+        "ts-node": "^10.4.0",
+        "tslib": "^2.3.1",
+        "typescript": "^4.5.2"
+    }
+}

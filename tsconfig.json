@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
+        "jsx": "react",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "lib": ["DOM", "ESNext"],
+        "strict": true,
+        "sourceMap": true,
+        "target": "es6",
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "outDir": "dist",
+        "declaration": true,
+        "declarationDir": "types",
+        "emitDeclarationOnly": true
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
+    "exclude": ["node_modules", "bin"]
+}
