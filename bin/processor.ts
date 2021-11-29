@@ -1,16 +1,20 @@
 import { ElementNode } from 'svg-parser'
 
-export function process(node: any, fileName: string) {
-    const svgChildren = node.children
+/**
+ * Checks if icon is a Badge type and omits background shape if true
+ * @param node AST SVG element
+ * @param fileName Name of Component derived from filename
+ * @returns AST SVG object without badge shape
+ */
+export function process(node: ElementNode, fileName: string) {
+    const svgChildren = node.children as ElementNode[]
     const isBadgeIcon = fileName.includes('Badge')
 
     const children = svgChildren.reduce(
-        (accumulator: any, child: any, index: number) => {
+        (accumulator: ElementNode[], child: ElementNode, index: number) => {
             const isBadgeRectChild =
                 isBadgeIcon && index === 0 && child.tagName === 'rect'
 
-            // Omit rect as it is manually created in the createIcon
-            // component in order to receive radius property
             if (isBadgeRectChild) {
                 return [...accumulator]
             }
@@ -23,5 +27,5 @@ export function process(node: any, fileName: string) {
     return {
         ...node,
         children,
-    }
+    } as ElementNode
 }

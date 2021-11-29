@@ -1,17 +1,18 @@
 import { isString, camelCase } from 'lodash'
+import { ElementNode } from 'svg-parser'
 
 /**
  * Formats all SVG property keys to camelCase instead of kebab-case
  * @param node AST Element Node
  * @returns Element Node
  */
-export function transform(node: any) {
-    if (isString(node)) return node
+export function transform(node: ElementNode | string): ElementNode {
+    if (isString(node)) return node as unknown as ElementNode
 
-    const propertyNames = Object.keys(node.properties)
+    const propertyNames = Object.keys(node.properties!)
 
     const properties = propertyNames.reduce((accumulator, propertyName) => {
-        const property = node.properties[propertyName]
+        const property = node.properties![propertyName]
 
         return {
             ...accumulator,
@@ -19,7 +20,9 @@ export function transform(node: any) {
         }
     }, {})
 
-    const children = node.children.map((child: any) => transform(child))
+    const children = (node.children as ElementNode[]).map((child) =>
+        transform(child)
+    )
 
     return {
         ...node,

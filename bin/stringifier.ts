@@ -2,9 +2,9 @@ import { isString } from 'lodash'
 import { ElementNode } from 'svg-parser'
 
 /**
- * Creates SVG fragment with = instead of : on properties
- * @param attributes Node attributes.
- * @returns React fragment with SVG path children
+ * Creates SVG property strings with = instead of :
+ * @param properties Node properties
+ * @returns Property name and value correctly formatted as a string
  */
 function stringifyProperties(properties = {} as any) {
     const propertyNames = Object.keys(properties)
@@ -16,9 +16,9 @@ function stringifyProperties(properties = {} as any) {
 }
 
 /**
- * Stringify SVG tree.
+ * Stringify the SVG tree into a ReactFragment
  * @param node Root node.
- * @returns
+ * @returns A string with children properties correctly structured
  */
 export function stringify(node: ElementNode): string {
     if (isString(node)) {
