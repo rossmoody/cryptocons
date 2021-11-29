@@ -8,20 +8,20 @@ import { pretty } from './prettifier'
 import { process } from './processor'
 import { componentize } from './componentizer'
 
-const SVG_DIRECTORY_PATH = path.join(__dirname, '../svgs')
-const COMPONENT_DIRECTORY_PATH = path.join(__dirname, '../src/icons')
-const EXPORT_FILE_PATH = path.join(COMPONENT_DIRECTORY_PATH, '/index.ts')
+const SVG_DIR_PATH = path.join(__dirname, '../svgs')
+const COMPONENT_DIR_PATH = path.join(__dirname, '../src/icons')
+const EXPORT_FILE_PATH = path.join(COMPONENT_DIR_PATH, '/index.ts')
 
 ;(async () => {
     try {
         fs.unlink(EXPORT_FILE_PATH)
 
-        const SVG_DIRECTORY = await fs.readdir(SVG_DIRECTORY_PATH)
+        const SVG_DIRECTORY = await fs.readdir(SVG_DIR_PATH)
 
         SVG_DIRECTORY.forEach(async (file) => {
             const FILE_NAME = file.slice(0, -4)
-            const SVG_FILE_PATH = `${SVG_DIRECTORY_PATH}/${FILE_NAME}.svg`
-            const COMPONENT_FILE_PATH = `${COMPONENT_DIRECTORY_PATH}/${FILE_NAME}.tsx`
+            const SVG_FILE_PATH = `${SVG_DIR_PATH}/${FILE_NAME}.svg`
+            const COMPONENT_FILE_PATH = `${COMPONENT_DIR_PATH}/${FILE_NAME}.tsx`
             const EXPORT_STRING = `export * from './${FILE_NAME}' \r\n`
 
             const svg = await fs.readFile(SVG_FILE_PATH)
