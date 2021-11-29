@@ -13,6 +13,7 @@ export const Icon = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
             height={size ?? height}
             width={size ?? width}
             aria-hidden={true}

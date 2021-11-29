@@ -14,7 +14,7 @@ export default [
                 file: packageJson.main,
                 format: 'cjs',
                 sourcemap: true,
-                name: 'splunk-icons',
+                name: 'cryptocons',
             },
             {
                 file: packageJson.module,
