@@ -6,13 +6,26 @@ export interface IconProps extends React.SVGAttributes<SVGElement> {
      */
     size?: string | number
     /**
-     * Sets the radius of the badge background shape
+     * Sets the radius of the background shape in Badge icons
+     * Defaults to 100: a circle
      */
     badgeRadius?: number
+    /**
+     * The filename ID used to generate unique background shape ID
+     */
+    shapeId?: string
 }
 
 export const Icon = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => {
-    const { size, children, height, width, badgeRadius, ...rest } = props
+    const {
+        size,
+        children,
+        height,
+        width,
+        shapeId,
+        badgeRadius = 100,
+        ...rest
+    } = props
 
     return (
         <svg
@@ -22,16 +35,15 @@ export const Icon = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => {
             width={size ?? width}
             aria-hidden={true}
             focusable={false}
-            fill="currentColor"
             ref={ref}
             {...rest}
         >
-            {badgeRadius && (
+            {shapeId && (
                 <rect
                     width="24"
                     height="24"
                     rx={badgeRadius}
-                    fill="url(#paint0_linear_127_57)"
+                    fill={`url(#${shapeId}_a)`}
                 />
             )}
             {children}

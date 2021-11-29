@@ -14,7 +14,8 @@
         "outDir": "dist",
         "declaration": true,
         "declarationDir": "types",
-        "emitDeclarationOnly": true
+        "emitDeclarationOnly": true,
+        "resolveJsonModule": true
     },
     "ts-node": {
         "compilerOptions": {

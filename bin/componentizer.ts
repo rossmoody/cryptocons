@@ -7,12 +7,7 @@ export function componentize(paths: string, iconName: string) {
         import { createIcon } from '../createIcon'
 
         export const ${iconName} = createIcon({
-          badgeShape: (<rect
-            width="24"
-            height="24"
-            rx={badgeRadius}
-            fill="url(#${iconName}_a)"
-          />),
+          shapeId: '${iconName}',
           path: (${paths})
         })
       `
