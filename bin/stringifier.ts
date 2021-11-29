@@ -1,44 +1,16 @@
-import { isPlainObject, isString } from 'lodash'
+import { isString } from 'lodash'
+import { ElementNode } from 'svg-parser'
 
 /**
- * Stringify style.
- * @param style Node style.
- * @returns
- */
-function stringifyStyle(style = {} as any) {
-    const propertyNames = Object.keys(style)
-
-    return propertyNames.reduce((accumulator: any, propertyName: any) => {
-        const property = style[propertyName]
-        const isStringPropriety = isString(property)
-
-        if (isStringPropriety) {
-            return accumulator + `${propertyName}: "${property}", `
-        }
-
-        return accumulator + `${propertyName}: ${property}, `
-    }, String())
-}
-
-/**
- * Stringify attributes.
+ * Creates SVG fragment with = instead of : on properties
  * @param attributes Node attributes.
- * @returns
+ * @returns React fragment with SVG path children
  */
 function stringifyProperties(properties = {} as any) {
     const propertyNames = Object.keys(properties)
 
-    return propertyNames.reduce((accumulator: any, propertyName: any) => {
+    return propertyNames.reduce((accumulator, propertyName) => {
         const property = properties[propertyName]
-        const isStyleProperty = isPlainObject(property)
-
-        if (isStyleProperty) {
-            return (
-                accumulator +
-                ` ${propertyName}={{ ${stringifyStyle(property)} }}`
-            )
-        }
-
         return accumulator + ` ${propertyName}="${property}"`
     }, String())
 }
@@ -48,20 +20,22 @@ function stringifyProperties(properties = {} as any) {
  * @param node Root node.
  * @returns
  */
-export function stringify(node: any) {
+export function stringify(node: ElementNode): string {
     if (isString(node)) {
         return node
     }
 
-    const properties = stringifyProperties(node.properties)
-    const buffer = `<${node.tagName}${properties}>`
+    const isSvgRoot = node.tagName === 'svg'
+    const tagName = isSvgRoot ? '' : node.tagName
+    const properties = isSvgRoot ? '' : stringifyProperties(node.properties)
+    const buffer = `<${tagName}${properties}>`
 
     const childrensBuffer = node.children.reduce(
-        (accumulator: any, childrenNode: any) => {
+        (accumulator: string, childrenNode: any) => {
             return accumulator + stringify(childrenNode)
         },
         buffer
     )
 
-    return childrensBuffer + `</${node.tagName}>`
+    return childrensBuffer + `</${tagName}>`
 }

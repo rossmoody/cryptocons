@@ -1,11 +1,11 @@
 import { format } from 'prettier'
 
 /**
- * Returns a formatted SVG string without the semicolon
- * @param svgString The SVG string
- * @returns A beautiful SVG string
+ * Formats string with Prettier
+ * @param string A JSX or SVG string
+ * @returns A beautiful string without the semicolon
  */
-export function pretty(svgString: string) {
-    const formatted = format(svgString, { parser: 'babel' })
+export function pretty(string: string) {
+    const formatted = format(string, { parser: 'babel' })
     return formatted.replace(/;/g, '')
 }
