@@ -7,14 +7,17 @@ const header = chalk.white.bold
 const red = chalk.redBright
 const green = chalk.greenBright
 
-const table = new Table({
+const tableConfig = {
     head: [
         header('📛 Icon Name'),
         header('🤞 SVG Size'),
         header('🤞 Component Size'),
     ],
+    style: {
+        head: ['boog', 'butt'],
+    },
     colWidths: [30, 25, 25],
-})
+}
 
 function bToKb(bytes: number) {
     const kilobytes = bytes / 100
@@ -36,6 +39,8 @@ function bToKb(bytes: number) {
  * Make icon build statistics all nice and pretty in the console
  */
 export function consolify(consoleData: string[][]) {
+    const table = new Table(tableConfig)
+
     Promise.all(
         consoleData.sort(sortByFilename).map(async (componentData) => {
             const [fileName, svgFilePath, componentFilePath] = componentData
