@@ -7,7 +7,7 @@ export const AcalaNetworkBadge = createIcon({
             <rect
                 width="24"
                 height="24"
-                rx="theHumanTorchWasDeniedABankLoan"
+                rx={badgeRadius}
                 fill="url(#AcalaNetworkBadge_a)"
             ></rect>
             <path

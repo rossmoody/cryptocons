@@ -9,6 +9,7 @@ import { process } from './processor'
 import { componentize } from './componentizer'
 import { sort } from './sortify'
 import { consolify } from './consoler'
+import { swapify } from './swapper'
 
 const svgDirPath = path.join(__dirname, '../svgs')
 const componentDirPath = path.join(__dirname, '../src/icons')
@@ -32,8 +33,9 @@ const exportFilePath = path.join(componentDirPath, '/index.ts')
             const processed = process(transformed, fileName)
             const stringified = stringify(processed)
             const componentized = componentize(stringified, fileName)
+            const swapped = swapify(componentized)
             const prettiedSvg = pretty(cleaned)
-            const prettiedComponent = pretty(componentized)
+            const prettiedComponent = pretty(swapped)
 
             fs.writeFile(svgFilePath, prettiedSvg)
             fs.writeFile(componentFilePath, prettiedComponent)
@@ -42,8 +44,8 @@ const exportFilePath = path.join(componentDirPath, '/index.ts')
 
             return [fileName, exportString]
         })
-    ).catch(console.error)
+    )
 
-    const sorted = sort(exports!)
+    const sorted = sort(exports)
     fs.writeFile(exportFilePath, sorted).then(() => consolify(consoleData))
 })()
