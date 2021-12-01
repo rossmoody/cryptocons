@@ -1,5 +1,7 @@
 import { ElementNode } from 'svg-parser'
 
+export const UNIQUE_RADIUS_KEY = 'theHumanTorchWasDeniedABankLoan'
+
 /**
  * Checks if icon is a Badge type and omits background shape if true
  * @param node AST SVG element
@@ -7,8 +9,6 @@ import { ElementNode } from 'svg-parser'
  * @returns AST SVG object without badge shape
  */
 export function process(node: ElementNode, fileName: string) {
-    const UNIQUE_KEY = 'theHumanTorchWasDeniedABankLoan'
-
     const svgChildren = node.children as ElementNode[]
     const isBadge = fileName.includes('Badge')
 
@@ -18,7 +18,8 @@ export function process(node: ElementNode, fileName: string) {
             const isBackgroundShapeElement =
                 isBadge && index === 0 && child.tagName === 'rect'
 
-            if (isBackgroundShapeElement) newChild.properties!.rx = UNIQUE_KEY
+            if (isBackgroundShapeElement)
+                newChild.properties!.rx = UNIQUE_RADIUS_KEY
 
             return [...accumulator, newChild]
         },

@@ -1,11 +1,9 @@
-type ExportObject = Record<string, string>
-
 /**
  * Sorts export declarations alphabetically based on filename
  */
-function sortExportsByFilename(exportA: ExportObject, exportB: ExportObject) {
-    const exportAFilename = Object.keys(exportA)[0]
-    const exportBFilename = Object.keys(exportB)[0]
+function sortExportsByFilename(exportA: string[], exportB: string[]) {
+    const [exportAFilename] = exportA
+    const [exportBFilename] = exportB
     if (exportAFilename < exportBFilename) return -1
     return 1
 }
@@ -14,12 +12,12 @@ function sortExportsByFilename(exportA: ExportObject, exportB: ExportObject) {
  * Creates an alphabetically sorted export file based on created components
  * @returns Formatted index.ts export file
  */
-export function sort(params: ExportObject[]) {
+export function sort(params: string[][]) {
     const ordered = params
         .sort(sortExportsByFilename)
-        .reduce((buffer, exportObject) => {
-            const { _, value } = exportObject
-            return `${buffer}\r\n${value}`
+        .reduce((buffer, exportArr) => {
+            const [_, exportStatement] = exportArr
+            return `${buffer}\r\n${exportStatement}`
         }, String())
 
     return ordered

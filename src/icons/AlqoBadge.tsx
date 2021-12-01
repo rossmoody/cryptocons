@@ -7,7 +7,7 @@ export const AlqoBadge = createIcon({
             <rect
                 width="24"
                 height="24"
-                rx="{badgeRadius}"
+                rx="theHumanTorchWasDeniedABankLoan"
                 fill="url(#AlqoBadge_a)"
             ></rect>
             <path

@@ -8,40 +8,41 @@ import { pretty } from './prettifier'
 import { process } from './processor'
 import { componentize } from './componentizer'
 import { sort } from './sortify'
+import { consolify } from './consoler'
 
-const SVG_DIR_PATH = path.join(__dirname, '../svgs')
-const COMPONENT_DIR_PATH = path.join(__dirname, '../src/icons')
-const EXPORT_FILE_PATH = path.join(COMPONENT_DIR_PATH, '/index.ts')
+const svgDirPath = path.join(__dirname, '../svgs')
+const componentDirPath = path.join(__dirname, '../src/icons')
+const exportFilePath = path.join(componentDirPath, '/index.ts')
 
 ;(async () => {
-    const SVG_DIRECTORY = await fs.readdir(SVG_DIR_PATH)
+    const svgDirectory = await fs.readdir(svgDirPath)
 
-    const COMPONENT_EXPORT_STRINGS = await Promise.all(
-        SVG_DIRECTORY.map(async (file) => {
-            const FILE_NAME = file.slice(0, -4)
-            const SVG_FILE_PATH = `${SVG_DIR_PATH}/${FILE_NAME}.svg`
-            const COMPONENT_FILE_PATH = `${COMPONENT_DIR_PATH}/${FILE_NAME}.tsx`
-            const EXPORT_STRING = `export * from './${FILE_NAME}'`
+    const exports = await Promise.all(
+        svgDirectory.map(async (file) => {
+            const fileName = file.slice(0, -4)
+            const svgFilePath = `${svgDirPath}/${fileName}.svg`
+            const componentFilePath = `${componentDirPath}/${fileName}.tsx`
+            const exportString = `export * from './${fileName}'`
 
-            const svg = await fs.readFile(SVG_FILE_PATH)
-            const cleaned = clean(svg, FILE_NAME)
+            const svg = await fs.readFile(svgFilePath)
+            const cleaned = clean(svg, fileName)
             const parsed = parse(cleaned)
             const transformed = transform(parsed)
-            const processed = process(transformed, FILE_NAME)
+            const processed = process(transformed, fileName)
             const stringified = stringify(processed)
-            const componentized = componentize(stringified, FILE_NAME)
+            const componentized = componentize(stringified, fileName)
             const prettiedSvg = pretty(cleaned)
             const prettiedComponent = pretty(componentized)
 
-            console.log(`Writing files for ${FILE_NAME}...`)
-            fs.writeFile(SVG_FILE_PATH, prettiedSvg)
-            fs.writeFile(COMPONENT_FILE_PATH, prettiedComponent)
+            fs.writeFile(svgFilePath, prettiedSvg)
+            fs.writeFile(componentFilePath, prettiedComponent)
 
-            return { FILE_NAME: EXPORT_STRING }
+            return [fileName, exportString]
         })
-    )
+    ).catch(console.error)
 
-    console.log(`Writing export file to ${EXPORT_FILE_PATH}...`)
-    const sorted = sort(COMPONENT_EXPORT_STRINGS)
-    fs.writeFile(EXPORT_FILE_PATH, sorted)
+    const sorted = sort(exports!)
+    fs.writeFile(exportFilePath, sorted)
+
+    consolify()
 })()

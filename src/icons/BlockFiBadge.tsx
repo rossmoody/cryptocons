@@ -7,7 +7,7 @@ export const BlockFiBadge = createIcon({
             <rect
                 width="24"
                 height="24"
-                rx="{badgeRadius}"
+                rx="theHumanTorchWasDeniedABankLoan"
                 fill="#004BEF"
             ></rect>
             <path

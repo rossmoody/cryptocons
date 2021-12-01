@@ -7,7 +7,7 @@ export const ChainlinkBadge = createIcon({
             <rect
                 width="24"
                 height="24"
-                rx="{badgeRadius}"
+                rx="theHumanTorchWasDeniedABankLoan"
                 fill="#375BD2"
             ></rect>
             <path
