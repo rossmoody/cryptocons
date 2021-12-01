@@ -37,7 +37,7 @@ const exportFilePath = path.join(componentDirPath, '/index.ts')
             fs.writeFile(svgFilePath, prettiedSvg)
             fs.writeFile(componentFilePath, prettiedComponent)
 
-            return [fileName, exportString]
+            return [fileName, exportString, cleaned, componentized]
         })
     ).catch(console.error)
 
