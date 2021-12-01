@@ -6,17 +6,13 @@ interface CreateIconOptions {
      * The `svg` path or group element.
      */
     path?: React.ReactElement | React.ReactElement[]
-    /**
-     * The component filename for creating Badge icon shapes
-     */
-    shapeId?: string
 }
 
 export function createIcon(options: CreateIconOptions) {
-    const { path, shapeId } = options
+    const { path } = options
 
     return React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
-        <Icon {...props} shapeId={shapeId} ref={ref}>
+        <Icon {...props} ref={ref}>
             {path}
         </Icon>
     ))

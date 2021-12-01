@@ -2,9 +2,14 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const AlqoBadge = createIcon({
-    shapeId: 'AlqoBadge',
     path: (
         <>
+            <rect
+                width="24"
+                height="24"
+                rx="{badgeRadius}"
+                fill="url(#AlqoBadge_a)"
+            ></rect>
             <path
                 fillRule="evenodd"
                 clipRule="evenodd"

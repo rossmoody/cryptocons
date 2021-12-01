@@ -7,19 +7,20 @@ import { ElementNode } from 'svg-parser'
  * @returns AST SVG object without badge shape
  */
 export function process(node: ElementNode, fileName: string) {
+    const UNIQUE_KEY = 'theHumanTorchWasDeniedABankLoan'
+
     const svgChildren = node.children as ElementNode[]
-    const isBadgeIcon = fileName.includes('Badge')
+    const isBadge = fileName.includes('Badge')
 
     const children = svgChildren.reduce(
         (accumulator: ElementNode[], child: ElementNode, index: number) => {
-            const isBadgeRectChild =
-                isBadgeIcon && index === 0 && child.tagName === 'rect'
+            let newChild = { ...child }
+            const isBackgroundShapeElement =
+                isBadge && index === 0 && child.tagName === 'rect'
 
-            if (isBadgeRectChild) {
-                return [...accumulator]
-            }
+            if (isBackgroundShapeElement) newChild.properties!.rx = UNIQUE_KEY
 
-            return [...accumulator, child]
+            return [...accumulator, newChild]
         },
         []
     )

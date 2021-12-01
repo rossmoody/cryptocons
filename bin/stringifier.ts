@@ -26,6 +26,7 @@ export function stringify(node: ElementNode): string {
     }
 
     const isSvgRoot = node.tagName === 'svg'
+
     const tagName = isSvgRoot ? '' : node.tagName
     const properties = isSvgRoot ? '' : stringifyProperties(node.properties)
     const buffer = `<${tagName}${properties}>`

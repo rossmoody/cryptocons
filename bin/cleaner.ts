@@ -1,9 +1,9 @@
 import { optimize } from 'svgo'
 
 /**
- * Cleans SVG string using SVGO with unique IDs
+ * Cleans SVG string using SVGO
  * @param svgString Original SVG string
- * @param fileName The filename used to generate unique IDs in paths
+ * @param fileName The filename used to generate unique url IDs
  * @returns Optimized SVG string
  */
 export function clean(svgString: string | Buffer, fileName: string) {
