@@ -6,6 +6,7 @@ import { sortByFilename } from './sortify'
 const header = chalk.white.bold
 const red = chalk.redBright
 const green = chalk.greenBright
+const grey = chalk.gray
 
 const tableConfig = {
     head: [
@@ -13,10 +14,7 @@ const tableConfig = {
         header('🤞 SVG Size'),
         header('🤞 Component Size'),
     ],
-    style: {
-        head: ['boog', 'butt'],
-    },
-    colWidths: [30, 25, 25],
+    colWidths: [30, 20, 20],
 }
 
 function bToKb(bytes: number) {
@@ -31,7 +29,7 @@ function bToKb(bytes: number) {
             return green(sizeString)
 
         default:
-            return sizeString
+            return grey(sizeString)
     }
 }
 
