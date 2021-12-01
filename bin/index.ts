@@ -16,6 +16,7 @@ const exportFilePath = path.join(componentDirPath, '/index.ts')
 
 ;(async () => {
     const svgDirectory = await fs.readdir(svgDirPath)
+    const consoleData: string[][] = []
 
     const exports = await Promise.all(
         svgDirectory.map(async (file) => {
@@ -37,12 +38,12 @@ const exportFilePath = path.join(componentDirPath, '/index.ts')
             fs.writeFile(svgFilePath, prettiedSvg)
             fs.writeFile(componentFilePath, prettiedComponent)
 
-            return [fileName, exportString, cleaned, componentized]
+            consoleData.push([fileName, svgFilePath, componentFilePath])
+
+            return [fileName, exportString]
         })
     ).catch(console.error)
 
     const sorted = sort(exports!)
-    fs.writeFile(exportFilePath, sorted)
-
-    consolify()
+    fs.writeFile(exportFilePath, sorted).then(() => consolify(consoleData))
 })()

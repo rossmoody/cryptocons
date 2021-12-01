@@ -1,7 +1,8 @@
 /**
- * Sorts export declarations alphabetically based on filename
+ * Sorts export declarations alphabetically based on filename.
+ * Filename string must be first element in array.
  */
-function sortExportsByFilename(exportA: string[], exportB: string[]) {
+export function sortByFilename(exportA: string[], exportB: string[]) {
     const [exportAFilename] = exportA
     const [exportBFilename] = exportB
     if (exportAFilename < exportBFilename) return -1
@@ -13,12 +14,10 @@ function sortExportsByFilename(exportA: string[], exportB: string[]) {
  * @returns Formatted index.ts export file
  */
 export function sort(params: string[][]) {
-    const ordered = params
-        .sort(sortExportsByFilename)
-        .reduce((buffer, exportArr) => {
-            const [_, exportStatement] = exportArr
-            return `${buffer}\r\n${exportStatement}`
-        }, String())
+    const ordered = params.sort(sortByFilename).reduce((buffer, exportArr) => {
+        const [_, exportStatement] = exportArr
+        return `${buffer}\r\n${exportStatement}`
+    }, String())
 
     return ordered
 }

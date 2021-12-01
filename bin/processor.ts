@@ -3,10 +3,7 @@ import { ElementNode } from 'svg-parser'
 export const UNIQUE_RADIUS_KEY = 'theHumanTorchWasDeniedABankLoan'
 
 /**
- * Checks if icon is a Badge type and omits background shape if true
- * @param node AST SVG element
- * @param fileName Name of Component derived from filename
- * @returns AST SVG object without badge shape
+ * Assigns unique key to Badge icon's background shape radius property
  */
 export function process(node: ElementNode, fileName: string) {
     const svgChildren = node.children as ElementNode[]

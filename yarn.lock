@@ -2270,6 +2270,11 @@
   resolved "https://registry.yarnpkg.com/@types/braces/-/braces-3.0.1.tgz#5a284d193cfc61abb2e5a50d36ebbc50d942a32b"
   integrity sha512-+euflG6ygo4bn0JHtn4pYqcXwRtLvElQ7/nnjDu7iYG56H0+OhCd7d6Ug0IE3WcFpZozBKW2+80FUbv5QGk5AQ==
 
+"@types/cli-table@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@types/cli-table/-/cli-table-0.3.0.tgz#f1857156bf5fd115c6a2db260ba0be1f8fc5671c"
+  integrity sha512-QnZUISJJXyhyD6L1e5QwXDV/A5i2W1/gl6D6YMc8u0ncPepbv/B4w3S+izVvtAg60m6h+JP09+Y/0zF2mojlFQ==
+
 "@types/color-convert@^2.0.0":
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@types/color-convert/-/color-convert-2.0.0.tgz#8f5ee6b9e863dcbee5703f5a517ffb13d3ea4e22"
@@ -3773,7 +3778,7 @@ chalk@^3.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chalk@^4.0.0, chalk@^4.1.0:
+chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
   integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
@@ -3895,6 +3900,14 @@ cli-table3@0.6.0:
   optionalDependencies:
     colors "^1.1.2"
 
+cli-table@^0.3.9:
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/cli-table/-/cli-table-0.3.9.tgz#c0570b079296608a31761a67d9af9841dbee8300"
+  integrity sha512-7eA6hFtAZwVx3dWAGoaBqTrzWko5jRUFKpHT64ZHkJpaA3y5wf5NlLjguqTRmqycatJZiwftODYYyGNLbQ7MuA==
+  dependencies:
+    colors "1.0.3"
+    strip-ansi "^6.0.1"
+
 cliui@^7.0.2:
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/cliui/-/cliui-7.0.4.tgz#a0265ee655476fc807aea9df3df8df7783808b4f"
@@ -3959,6 +3972,11 @@ color-name@~1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
+
+colors@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/colors/-/colors-1.0.3.tgz#0433f44d809680fdeb60ed260f1b0c262e82a40b"
+  integrity sha1-BDP0TYCWgP3rYO0mDxsMJi6CpAs=
 
 colors@^1.1.2:
   version "1.4.0"
