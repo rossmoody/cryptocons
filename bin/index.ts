@@ -36,11 +36,11 @@ const exportFilePath = path.join(componentDirPath, '/index.ts')
                 fileName,
                 processed.rectFill
             )
+
             const prettiedSvg = pretty(cleaned)
             const prettiedComponent = pretty(componentized)
-
-            fs.writeFile(svgFilePath, prettiedSvg)
-            fs.writeFile(componentFilePath, prettiedComponent)
+            await fs.writeFile(svgFilePath, prettiedSvg)
+            await fs.writeFile(componentFilePath, prettiedComponent)
 
             consoleData.push([fileName, svgFilePath, componentFilePath])
 
@@ -49,5 +49,6 @@ const exportFilePath = path.join(componentDirPath, '/index.ts')
     )
 
     const sorted = sort(exports)
-    fs.writeFile(exportFilePath, sorted).then(() => consolify(consoleData))
+    consolify(consoleData)
+    fs.writeFile(exportFilePath, sorted)
 })()

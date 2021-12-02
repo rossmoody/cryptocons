@@ -1,0 +1,57 @@
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M15.4013 16.0737C14.4844 15.805 13.5333 15.6713 12.5779 15.6767C11.011 15.6745 9.46743 16.0556 8.08156 16.7866L8.97408 15.2676L9.77073 13.9173L11.9217 10.2554L13.9471 13.6311L10.6079 8.05721L7.02161 14.1766L3.43127 20.3877H6.02782C7.65175 18.9474 9.74039 18.1406 11.9109 18.1153C14.29 18.1058 16.4423 18.9713 17.987 20.3823L15.4013 16.0737Z"
+        fill="url(#AcalaNetwork_a)"
+    />
+    <path
+        d="M10.6754 3.6104L6.33702 10.9598L2 18.3147L2.71564 19.3058L3.43127 20.386L7.0216 14.1748L10.6079 8.05814L13.9363 13.6279C13.4613 13.565 12.9827 13.5344 12.5036 13.5361C11.5787 13.5385 10.6582 13.6648 9.76667 13.9115L8.97002 15.2618L8.0775 16.7808C9.46337 16.0497 11.007 15.6687 12.5739 15.6709C13.5293 15.6655 14.4804 15.7992 15.3972 16.0679L17.9776 20.3792H20.7227L10.6754 3.6104Z"
+        fill="url(#AcalaNetwork_b)"
+    />
+    <path
+        d="M10.6754 3.60946L20.7267 20.385L22 18.2381L13.199 3.60001L10.6754 3.60946Z"
+        fill="url(#AcalaNetwork_c)"
+    />
+    <defs>
+        <linearGradient
+            id="AcalaNetwork_a"
+            x1="7.43884"
+            y1="9.69912"
+            x2="11.5166"
+            y2="23.0329"
+            gradientUnits="userSpaceOnUse"
+        >
+            <stop offset="0.39" stop-color="#FF9373" />
+            <stop offset="0.51" stop-color="#FE8F73" />
+            <stop offset="0.62" stop-color="#FB8373" />
+            <stop offset="0.73" stop-color="#F77073" />
+            <stop offset="0.83" stop-color="#F15472" />
+            <stop offset="0.94" stop-color="#E93172" />
+            <stop offset="1" stop-color="#E41A72" />
+        </linearGradient>
+        <linearGradient
+            id="AcalaNetwork_b"
+            x1="20.7267"
+            y1="11.9982"
+            x2="3.61896"
+            y2="11.9982"
+            gradientUnits="userSpaceOnUse"
+        >
+            <stop offset="0.09" stop-color="#FF9373" />
+            <stop offset="0.15" stop-color="#FD8A73" />
+            <stop offset="0.55" stop-color="#F04E72" />
+            <stop offset="0.85" stop-color="#E72872" />
+            <stop offset="1" stop-color="#E41A72" />
+        </linearGradient>
+        <linearGradient
+            id="AcalaNetwork_c"
+            x1="20.7767"
+            y1="11.9932"
+            x2="13.8917"
+            y2="11.9932"
+            gradientUnits="userSpaceOnUse"
+        >
+            <stop stop-color="#FF9373" />
+            <stop offset="1" stop-color="#E41A72" />
+        </linearGradient>
+    </defs>
+</svg>

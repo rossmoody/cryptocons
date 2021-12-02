@@ -39,18 +39,20 @@ function bToKb(bytes: number) {
 /**
  * Make icon build statistics all nice and pretty in the console
  */
-export function consolify(consoleData: string[][]) {
+export async function consolify(consoleData: string[][]) {
     const table = new Table(tableConfig)
 
-    Promise.all(
-        consoleData.sort(sortByFilename).map(async (componentData) => {
+    const data = await Promise.all(
+        consoleData.map(async (componentData) => {
             const [fileName, svgFilePath, componentFilePath] = componentData
             const { size: svgFileSize } = await fs.stat(svgFilePath)
             const { size: componentFileSize } = await fs.stat(componentFilePath)
-
-            table.push([fileName, bToKb(svgFileSize), bToKb(componentFileSize)])
+            console.log(svgFileSize)
+            return [fileName, bToKb(svgFileSize), bToKb(componentFileSize)]
         })
     )
-        .then(() => console.log(table.toString()))
-        .catch(console.error)
+
+    table.push(...data)
+    table.sort(sortByFilename)
+    console.log(table.toString())
 }

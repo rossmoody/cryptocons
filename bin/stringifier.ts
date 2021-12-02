@@ -1,17 +1,32 @@
-import { isString } from 'lodash'
+import { isString, camelCase } from 'lodash'
 import { ElementNode } from 'svg-parser'
+
+/**
+ * Stringify styles
+ */
+function stringifyStyle(style: string) {
+    const [attribute, value] = style.split(':')
+    return `${camelCase(attribute)}: '${value}'`
+}
 
 /**
  * Creates SVG property strings with = instead of :
  */
-export function stringifyProperties(
-    properties: Record<string, string | number>
+export function stringifyAttributes(
+    attributes: Record<string, string | number>
 ) {
-    const propertyNames = Object.keys(properties)
+    const attributeNames = Object.keys(attributes)
 
-    return propertyNames.reduce((accumulator, propertyName) => {
-        const property = properties[propertyName]
-        return accumulator + ` ${propertyName}="${property}"`
+    return attributeNames.reduce((accumulator, attributeName) => {
+        const attribute = attributes[attributeName]
+        const isStyleAttribute = attributeName === 'style'
+
+        if (isStyleAttribute)
+            return `${accumulator} ${attributeName}={{ ${stringifyStyle(
+                attribute as string
+            )} }}`
+
+        return `${accumulator} ${attributeName}="${attribute}"`
     }, String())
 }
 
@@ -22,9 +37,8 @@ export function stringify(node: ElementNode): string {
     if (isString(node)) return node
 
     const isSvgRoot = node.tagName === 'svg'
-
     const tagName = isSvgRoot ? '' : node.tagName
-    const properties = isSvgRoot ? '' : stringifyProperties(node.properties!)
+    const properties = isSvgRoot ? '' : stringifyAttributes(node.properties!)
     const buffer = `<${tagName}${properties}>`
 
     const childrensBuffer = node.children.reduce(

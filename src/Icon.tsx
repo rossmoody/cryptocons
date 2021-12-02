@@ -2,12 +2,13 @@ import React from 'react'
 
 export interface IconProps extends React.SVGAttributes<SVGElement> {
     /**
-     * Sets the width and height of the SVG element.
+     * Proportionally sets the width and height of the SVG element.
      */
     size?: string | number
     /**
-     * Sets the radius of the background shape in Badge icons
-     * Defaults to 100: a circle
+     * Sets the radius of the background shape in Badge icons.
+     * Has no effect on logo icons.
+     * Defaults to 12: a circle.
      */
     badgeRadius?: number
 }
@@ -30,3 +31,8 @@ export const Icon = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => {
         </svg>
     )
 })
+
+Icon.defaultProps = {
+    size: 24,
+    badgeRadius: 12,
+}
