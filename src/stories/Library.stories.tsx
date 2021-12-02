@@ -4,19 +4,17 @@ import * as icons from '../icons'
 import { IconProps } from '..'
 
 export default {
-    title: 'Library',
+    title: 'Cryptocons/Library',
     args: {
         size: 48,
-        badgeRadius: 8,
+        badgeRadius: 12,
     },
 } as Meta
 
-export const Library: Story<IconProps> = (args) => {
-    return (
-        <>
-            {Object.entries(icons).map(([displayName, Icon]) => (
-                <Icon {...args} key={displayName} />
-            ))}
-        </>
-    )
-}
+export const Library: Story<IconProps> = (args) => (
+    <React.Fragment>
+        {Object.entries(icons).map(([displayName, Icon]) => (
+            <Icon {...args} key={displayName} />
+        ))}
+    </React.Fragment>
+)

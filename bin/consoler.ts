@@ -25,7 +25,7 @@ function bToKb(bytes: number) {
     const sizeString = `${kilobytes} kb`
 
     switch (true) {
-        case kilobytes > 30:
+        case kilobytes > 50:
             return red(sizeString)
 
         case kilobytes < 15:
@@ -47,7 +47,6 @@ export async function consolify(consoleData: string[][]) {
             const [fileName, svgFilePath, componentFilePath] = componentData
             const { size: svgFileSize } = await fs.stat(svgFilePath)
             const { size: componentFileSize } = await fs.stat(componentFilePath)
-            console.log(svgFileSize)
             return [fileName, bToKb(svgFileSize), bToKb(componentFileSize)]
         })
     )

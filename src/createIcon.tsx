@@ -18,11 +18,14 @@ interface CreateIconOptions {
 export function createIcon(options: CreateIconOptions) {
     const { path, rectElement } = options
 
-    return React.forwardRef<SVGSVGElement, IconProps>((props, ref) => (
-        <Icon {...props} ref={ref}>
-            {rectElement &&
-                React.cloneElement(rectElement, { rx: props.badgeRadius })}
-            {path}
-        </Icon>
-    ))
+    return React.forwardRef<SVGSVGElement, IconProps>((props, ref) => {
+        const { badgeRadius = 12, ...rest } = props
+        return (
+            <Icon {...rest} ref={ref}>
+                {rectElement &&
+                    React.cloneElement(rectElement, { rx: badgeRadius })}
+                {path}
+            </Icon>
+        )
+    })
 }

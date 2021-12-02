@@ -14,7 +14,14 @@ export interface IconProps extends React.SVGAttributes<SVGElement> {
 }
 
 export const Icon = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => {
-    const { size, children, height, width, badgeRadius, ...rest } = props
+    const {
+        size = 24,
+        badgeRadius = 12,
+        children,
+        height,
+        width,
+        ...rest
+    } = props
 
     return (
         <svg
@@ -31,8 +38,3 @@ export const Icon = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => {
         </svg>
     )
 })
-
-Icon.defaultProps = {
-    size: 24,
-    badgeRadius: 12,
-}

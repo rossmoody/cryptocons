@@ -1,7 +1,7 @@
 {
     "name": "cryptocons",
-    "version": "1.0.0",
-    "description": "Cryptocurrency icon logos as tidy SVG react components.",
+    "version": "1.0.3",
+    "description": "Cryptocurrency logos as tidy, optimized SVG React components.",
     "keywords": [
         "react",
         "icon",
@@ -12,9 +12,7 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "build:npm": "rollup -c",
-        "build:exports": "ts-node bin/index",
-        "build:storybook": "build-storybook -o public",
-        "format": "prettier --write .",
+        "build:exports": "ts-node bin/builder",
         "storybook": "start-storybook -p 6006"
     },
     "repository": {
