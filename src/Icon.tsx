@@ -13,7 +13,7 @@ export interface IconProps extends React.SVGAttributes<SVGElement> {
 }
 
 export const Icon = React.forwardRef<SVGSVGElement, IconProps>((props, ref) => {
-    const { size, children, height, width, badgeRadius = 100, ...rest } = props
+    const { size, children, height, width, badgeRadius, ...rest } = props
 
     return (
         <svg

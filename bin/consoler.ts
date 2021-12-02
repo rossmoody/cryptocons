@@ -17,15 +17,18 @@ const tableConfig = {
     colWidths: [30, 20, 20],
 }
 
+/**
+ * Converts bytes to kilobytes and conditionally styles based on file size
+ */
 function bToKb(bytes: number) {
     const kilobytes = bytes / 100
     const sizeString = `${kilobytes} kb`
 
     switch (true) {
-        case kilobytes > 20:
+        case kilobytes > 30:
             return red(sizeString)
 
-        case kilobytes < 5:
+        case kilobytes < 15:
             return green(sizeString)
 
         default:

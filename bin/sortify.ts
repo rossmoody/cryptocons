@@ -16,7 +16,7 @@ export function sortByFilename(exportA: string[], exportB: string[]) {
 export function sort(params: string[][]) {
     const ordered = params.sort(sortByFilename).reduce((buffer, exportArr) => {
         const [_, exportStatement] = exportArr
-        return `${buffer}\r\n${exportStatement}`
+        return `${buffer}${exportStatement}\r\n`
     }, String())
 
     return ordered

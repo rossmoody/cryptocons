@@ -3,8 +3,6 @@ import { ElementNode } from 'svg-parser'
 
 /**
  * Formats all SVG property keys to camelCase instead of kebab-case
- * @param node AST Element Node
- * @returns Element Node
  */
 export function transform(node: ElementNode | string): ElementNode {
     if (isString(node)) return node as unknown as ElementNode

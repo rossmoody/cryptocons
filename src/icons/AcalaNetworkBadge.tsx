@@ -2,14 +2,11 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const AcalaNetworkBadge = createIcon({
+    rectElement: (
+        <rect height="24" width="24" fill="url(#AcalaNetworkBadge_a)" />
+    ),
     path: (
         <>
-            <rect
-                width="24"
-                height="24"
-                rx={badgeRadius}
-                fill="url(#AcalaNetworkBadge_a)"
-            ></rect>
             <path
                 d="M12.0134 14.7369C11.3923 14.7369 10.7893 14.789 10.2054 14.8879L11.1042 13.3303C12.1153 13.2627 13.1308 13.3095 14.1314 13.4698L10.6407 7.42441L4.83039 17.4889L4 16.0508L10.6278 4.56965L10.6417 4.59354L10.6546 4.57061L18.6536 18.4254H16.9919L15.1237 15.1874C14.1147 14.8856 13.0666 14.7338 12.0134 14.7369ZM19.1706 17.5133L11.4257 4.09999H13.0865L20 16.0747L19.1706 17.5133Z"
                 fill="white"

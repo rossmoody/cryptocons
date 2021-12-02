@@ -3,10 +3,10 @@ import { ElementNode } from 'svg-parser'
 
 /**
  * Creates SVG property strings with = instead of :
- * @param properties Node properties
- * @returns Property name and value correctly formatted as a string
  */
-function stringifyProperties(properties = {} as any) {
+export function stringifyProperties(
+    properties: Record<string, string | number>
+) {
     const propertyNames = Object.keys(properties)
 
     return propertyNames.reduce((accumulator, propertyName) => {
@@ -16,19 +16,15 @@ function stringifyProperties(properties = {} as any) {
 }
 
 /**
- * Stringify the SVG tree into a ReactFragment
- * @param node Root node.
- * @returns A string with children properties correctly structured
+ * Stringify the svg children elements into a ReactFragment
  */
 export function stringify(node: ElementNode): string {
-    if (isString(node)) {
-        return node
-    }
+    if (isString(node)) return node
 
     const isSvgRoot = node.tagName === 'svg'
 
     const tagName = isSvgRoot ? '' : node.tagName
-    const properties = isSvgRoot ? '' : stringifyProperties(node.properties)
+    const properties = isSvgRoot ? '' : stringifyProperties(node.properties!)
     const buffer = `<${tagName}${properties}>`
 
     const childrensBuffer = node.children.reduce(

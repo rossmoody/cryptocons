@@ -1,30 +1,39 @@
 import { ElementNode } from 'svg-parser'
 
-export const UNIQUE_RADIUS_KEY = 'theHumanTorchWasDeniedABankLoan'
+interface BadgeNode extends ElementNode {
+    rectFill?: string
+}
 
 /**
- * Assigns unique key to Badge icon's background shape radius property
+ * Process badge icon background shape fill and omit it from node
  */
 export function process(node: ElementNode, fileName: string) {
+    const nodeClone: BadgeNode = { ...node }
     const svgChildren = node.children as ElementNode[]
     const isBadge = fileName.includes('Badge')
 
     const children = svgChildren.reduce(
         (accumulator: ElementNode[], child: ElementNode, index: number) => {
-            let newChild = { ...child }
-            const isBackgroundShapeElement =
-                isBadge && index === 0 && child.tagName === 'rect'
+            const childClone = { ...child }
 
-            if (isBackgroundShapeElement)
-                newChild.properties!.rx = UNIQUE_RADIUS_KEY
+            const isValidBackgroundShapeElement =
+                isBadge &&
+                index === 0 &&
+                childClone.tagName === 'rect' &&
+                childClone.properties!.fill
 
-            return [...accumulator, newChild]
+            if (isValidBackgroundShapeElement) {
+                nodeClone.rectFill = String(childClone.properties!.fill)
+                return [...accumulator]
+            }
+
+            return [...accumulator, childClone]
         },
         []
     )
 
     return {
-        ...node,
+        ...nodeClone,
         children,
-    } as ElementNode
+    } as BadgeNode
 }

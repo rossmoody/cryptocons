@@ -1,16 +1,21 @@
 /**
- * Creates an icon component template literal based on icon name
- * @param svgFragment SVG as JSX fragment string
- * @param iconName The component name created from file name
- * @returns Template literal component definition
+ * Creates an Icon component definition as a template literal based on icon name
  */
-export function componentize(svgFragment: string, iconName: string) {
-    return `
-        import React from 'react'
-        import { createIcon } from '../createIcon'
+export function componentize(
+    svgFragment: string,
+    iconName: string,
+    rectFill?: string
+) {
+    const rectEleString = `<rect height="24" width="24" fill="${rectFill}" />`
+    const rectProperty = rectFill ? `rectElement: (${rectEleString}),` : ''
 
-        export const ${iconName} = createIcon({
-          path: (${svgFragment})
-        })
-      `
+    return `
+      import React from 'react'
+      import { createIcon } from '../createIcon'
+
+      export const ${iconName} = createIcon({
+        ${rectProperty}
+        path: (${svgFragment})
+      })
+`
 }
