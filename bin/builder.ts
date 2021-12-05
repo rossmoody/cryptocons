@@ -23,6 +23,7 @@ const exportFilePath = path.join(componentDirPath, '/index.ts')
     const svgDirectory = await fs.readdir(svgDirPath)
 
     await fs.rmdir(componentDirPath, { recursive: true })
+    await fs.mkdir(componentDirPath)
 
     const exports = await Promise.all(
         svgDirectory.map(async (file) => {

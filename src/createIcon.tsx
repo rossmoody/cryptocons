@@ -7,13 +7,13 @@ interface CreateIconOptions {
      */
     path: React.ReactElement | React.ReactElement[]
     /**
-     * The background shape with badgeRadius property
+     * The background rect element
      */
     rectElement?: React.ReactElement
 }
 
 /**
- * Convenience function around the Icon component
+ * Convenience function around the Icon component that also sets tags.
  */
 export function createIcon(options: CreateIconOptions) {
     const { path, rectElement } = options
