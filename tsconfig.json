@@ -22,5 +22,5 @@
             "module": "CommonJS"
         }
     },
-    "exclude": ["node_modules", "bin", "dist"]
+    "exclude": ["node_modules", "scripts", "dist"]
 }

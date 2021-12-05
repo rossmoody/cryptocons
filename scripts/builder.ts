@@ -12,7 +12,7 @@ import {
     consolify,
 } from '.'
 
-const svgDirPath = path.join(__dirname, '../svgs')
+const svgDirPath = path.join(__dirname, '../src/svgs')
 const componentDirPath = path.join(__dirname, '../src/icons')
 const exportFilePath = path.join(componentDirPath, '/index.ts')
 

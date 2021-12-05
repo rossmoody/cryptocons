@@ -12,7 +12,7 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "rollup": "rollup -c",
-        "build": "ts-node bin/builder",
+        "build": "ts-node scripts/builder",
         "storybook": "start-storybook -p 6006"
     },
     "repository": {
