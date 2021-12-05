@@ -12,8 +12,8 @@ import {
     consolify,
 } from '.'
 
-const svgDirPath = path.join(__dirname, '../src/svgs')
-const componentDirPath = path.join(__dirname, '../src/icons')
+const svgDirPath = path.join(__dirname, '../src/svg')
+const componentDirPath = path.join(__dirname, '../src/components')
 const exportFilePath = path.join(componentDirPath, '/index.ts')
 
 ;(async () => {

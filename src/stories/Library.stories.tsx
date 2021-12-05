@@ -1,6 +1,6 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
-import * as icons from '../icons'
+import * as icons from '../components'
 import { AcalaNetwork, AcalaNetworkBadge } from '..'
 import { IconProps } from '..'
 

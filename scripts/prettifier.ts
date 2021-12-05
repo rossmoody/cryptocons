@@ -1,8 +1,8 @@
 import { format, Options } from 'prettier'
-import prettierrc from '../.prettierrc.json'
+import { prettier } from '../package.json'
 
 const prettierConfig = {
-    ...prettierrc,
+    ...prettier,
     parser: 'babel',
 } as Options
 

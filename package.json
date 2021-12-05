@@ -15,6 +15,12 @@
         "build": "ts-node scripts/builder",
         "storybook": "start-storybook -p 6006"
     },
+    "prettier": {
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": false,
+        "singleQuote": true
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/rossmoody/cryptocons"
