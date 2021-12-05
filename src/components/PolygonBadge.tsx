@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const PolygonBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#8247E5" />,
+    rectFill: '#8247E5',
     path: (
         <>
             <path

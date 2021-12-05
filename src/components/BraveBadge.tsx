@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const BraveBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="white" />,
+    rectFill: 'white',
     path: (
         <>
             <path

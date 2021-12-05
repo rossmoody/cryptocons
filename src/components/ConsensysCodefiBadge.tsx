@@ -2,9 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const ConsensysCodefiBadge = createIcon({
-    rectElement: (
-        <rect height="24" width="24" fill="url(#ConsensysCodefiBadge_a)" />
-    ),
+    rectFill: 'url(#ConsensysCodefiBadge_a)',
     path: (
         <>
             <path

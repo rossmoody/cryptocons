@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const CreamBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#69E2DC" />,
+    rectFill: '#69E2DC',
     path: (
         <>
             <path

@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const TezosBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#2C7DF7" />,
+    rectFill: '#2C7DF7',
     path: (
         <>
             <path

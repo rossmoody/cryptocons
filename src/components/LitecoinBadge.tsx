@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const LitecoinBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#C0C0C0" />,
+    rectFill: '#C0C0C0',
     path: (
         <>
             <path

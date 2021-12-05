@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const VarenBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#222222" />,
+    rectFill: '#222222',
     path: (
         <>
             <path

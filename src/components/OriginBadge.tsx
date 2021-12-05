@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const OriginBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#1A82FF" />,
+    rectFill: '#1A82FF',
     path: (
         <>
             <path

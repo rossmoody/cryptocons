@@ -2,9 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const AcalaNetworkBadge = createIcon({
-    rectElement: (
-        <rect height="24" width="24" fill="url(#AcalaNetworkBadge_a)" />
-    ),
+    rectFill: 'url(#AcalaNetworkBadge_a)',
     path: (
         <>
             <path

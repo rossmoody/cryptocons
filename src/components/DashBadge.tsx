@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const DashBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#008DE4" />,
+    rectFill: '#008DE4',
     path: (
         <>
             <path

@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const ZapperBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#784FFE" />,
+    rectFill: '#784FFE',
     path: (
         <>
             <path

@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const NexoBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#1A4199" />,
+    rectFill: '#1A4199',
     path: (
         <>
             <path

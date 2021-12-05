@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const TetherBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="url(#TetherBadge_a)" />,
+    rectFill: 'url(#TetherBadge_a)',
     path: (
         <>
             <path

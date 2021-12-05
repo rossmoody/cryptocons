@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const CardanoBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#0033AD" />,
+    rectFill: '#0033AD',
     path: (
         <>
             <path

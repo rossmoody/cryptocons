@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const BitcoinBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#F5B300" />,
+    rectFill: '#F5B300',
     path: (
         <>
             <path

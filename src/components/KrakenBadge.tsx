@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const KrakenBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#5442D1" />,
+    rectFill: '#5442D1',
     path: (
         <>
             <path

@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const BasicAttentionTokenBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#352542" />,
+    rectFill: '#352542',
     path: (
         <>
             <path

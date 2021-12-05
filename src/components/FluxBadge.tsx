@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const FluxBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#2B61D1" />,
+    rectFill: '#2B61D1',
     path: (
         <>
             <path

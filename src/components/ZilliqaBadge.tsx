@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const ZilliqaBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#4DC0BE" />,
+    rectFill: '#4DC0BE',
     path: (
         <>
             <path

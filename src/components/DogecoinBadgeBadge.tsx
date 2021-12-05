@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const DogecoinBadgeBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#BA9F33" />,
+    rectFill: '#BA9F33',
     path: (
         <>
             <path

@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const CoinMarketCapBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#17181B" />,
+    rectFill: '#17181B',
     path: (
         <>
             <path

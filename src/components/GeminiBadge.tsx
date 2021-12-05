@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const GeminiBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#00DCFA" />,
+    rectFill: '#00DCFA',
     path: (
         <>
             <path

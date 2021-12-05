@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const EosioBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#244EDB" />,
+    rectFill: '#244EDB',
     path: (
         <>
             <path

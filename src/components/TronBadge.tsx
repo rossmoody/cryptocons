@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const TronBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#EF0027" />,
+    rectFill: '#EF0027',
     path: (
         <>
             <path

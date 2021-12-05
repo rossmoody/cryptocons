@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const AlgorandBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="black" />,
+    rectFill: 'black',
     path: (
         <>
             <path

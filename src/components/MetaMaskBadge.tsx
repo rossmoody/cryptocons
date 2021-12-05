@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const MetaMaskBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#EAE0D7" />,
+    rectFill: '#EAE0D7',
     path: (
         <>
             <path

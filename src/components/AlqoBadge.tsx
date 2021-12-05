@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const AlqoBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="url(#AlqoBadge_a)" />,
+    rectFill: 'url(#AlqoBadge_a)',
     path: (
         <>
             <path

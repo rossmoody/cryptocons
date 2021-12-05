@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const EthereumBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#E9E9E9" />,
+    rectFill: '#E9E9E9',
     path: (
         <>
             <g clipPath="url(#EthereumBadge_a)">

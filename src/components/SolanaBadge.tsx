@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const SolanaBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#1A1A1A" />,
+    rectFill: '#1A1A1A',
     path: (
         <>
             <path

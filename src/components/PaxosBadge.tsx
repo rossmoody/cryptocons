@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const PaxosBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#F5FFF9" />,
+    rectFill: '#F5FFF9',
     path: (
         <>
             <path

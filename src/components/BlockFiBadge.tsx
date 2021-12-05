@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const BlockFiBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#004BEF" />,
+    rectFill: '#004BEF',
     path: (
         <>
             <path

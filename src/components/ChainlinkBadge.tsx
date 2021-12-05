@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const ChainlinkBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#375BD2" />,
+    rectFill: '#375BD2',
     path: (
         <>
             <path

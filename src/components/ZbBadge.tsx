@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const ZbBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#E91C41" />,
+    rectFill: '#E91C41',
     path: (
         <>
             <path

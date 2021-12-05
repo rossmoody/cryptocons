@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const LinchExchangeBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#94A6C3" />,
+    rectFill: '#94A6C3',
     path: (
         <>
             <path

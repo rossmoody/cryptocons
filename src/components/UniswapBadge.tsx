@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const UniswapBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#FF007A" />,
+    rectFill: '#FF007A',
     path: (
         <>
             <path

@@ -6,8 +6,7 @@ export function componentize(
     iconName: string,
     rectFill?: string
 ) {
-    const rectEleString = `<rect height="24" width="24" fill="${rectFill}" />`
-    const rectProperty = rectFill ? `rectElement: (${rectEleString}),` : ''
+    const rectProperty = rectFill ? `rectFill: '${rectFill}',` : ''
 
     return `
       import React from 'react'

@@ -7,24 +7,30 @@ interface CreateIconOptions {
      */
     path: React.ReactElement | React.ReactElement[]
     /**
-     * The background rect element
+     * The fill of the background rect element. Typically a color or url ID.
      */
-    rectElement?: React.ReactElement
+    rectFill?: string
 }
 
 /**
  * Convenience function around the Icon component that also sets tags.
  */
 export function createIcon(options: CreateIconOptions) {
-    const { path, rectElement } = options
+    const { path, rectFill } = options
 
     return React.forwardRef<SVGSVGElement, IconProps>((props, ref) => {
         const { badgeRadius = 12, ...rest } = props
 
         return (
             <Icon {...rest} ref={ref}>
-                {rectElement &&
-                    React.cloneElement(rectElement, { rx: badgeRadius })}
+                {rectFill && (
+                    <rect
+                        height="24"
+                        width="24"
+                        rx={badgeRadius}
+                        fill={rectFill}
+                    />
+                )}
                 {path}
             </Icon>
         )

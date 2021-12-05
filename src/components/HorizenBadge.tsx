@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const HorizenBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="url(#HorizenBadge_a)" />,
+    rectFill: 'url(#HorizenBadge_a)',
     path: (
         <>
             <path

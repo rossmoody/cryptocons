@@ -2,7 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const BinanceBadge = createIcon({
-    rectElement: <rect height="24" width="24" fill="#2F2B32" />,
+    rectFill: '#2F2B32',
     path: (
         <>
             <path
