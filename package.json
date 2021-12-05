@@ -11,8 +11,8 @@
     "module": "dist/esm/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build:npm": "rollup -c",
-        "build:exports": "ts-node bin/builder",
+        "rollup": "rollup -c",
+        "build": "ts-node bin/builder",
         "storybook": "start-storybook -p 6006"
     },
     "repository": {

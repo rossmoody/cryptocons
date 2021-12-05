@@ -13,9 +13,9 @@ export default {
 
 export const AllIcons: Story<IconProps> = (args) => (
     <React.Fragment>
-        {Object.entries(icons).map(([displayName, Icon]) => (
-            <Icon {...args} key={displayName} />
-        ))}
+        {Object.entries(icons).map(([displayName, Icon]) => {
+            return <Icon {...args} key={displayName} />
+        })}
     </React.Fragment>
 )
 
