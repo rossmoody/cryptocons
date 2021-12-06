@@ -24,7 +24,7 @@ const metaFilePath = path.join(__dirname, '../src/metadata.json')
     console.log(`Starting to build icon components from ${svgDirPath}`)
 
     const consoleData: string[][] = []
-    const tagData: string[] = []
+    const filenames: string[] = []
 
     await fs.rmdir(componentDirPath, { recursive: true })
     await fs.mkdir(componentDirPath)
@@ -53,16 +53,14 @@ const metaFilePath = path.join(__dirname, '../src/metadata.json')
             await fs.writeFile(svgFilePath, prettiedSvg)
             await fs.writeFile(componentFilePath, prettiedComponent)
 
-            tagData.push(fileName)
-            consoleData.push([fileName, svgFilePath, componentFilePath])
+            filenames.push(fileName)
+            consoleData.push([fileName, svgFilePath])
 
             return [fileName, exportString]
         })
     ).then((result) => {
-        const tags = tagify(tagData)
-
         consolify(consoleData)
-        fs.writeFile(metaFilePath, tags)
+        fs.writeFile(metaFilePath, tagify(filenames))
         fs.writeFile(exportFilePath, sort(result))
     })
 })()

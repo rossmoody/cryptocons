@@ -10,14 +10,13 @@ interface BadgeNode extends ElementNode {
 export function process(node: ElementNode, fileName: string) {
     const nodeClone: BadgeNode = { ...node }
     const svgChildren = node.children as ElementNode[]
-    const isBadge = fileName.includes('Badge')
 
     const children = svgChildren.reduce(
         (accumulator: ElementNode[], child: ElementNode, index: number) => {
             const childClone = { ...child }
 
             const isValidBackgroundShapeElement =
-                isBadge &&
+                fileName.includes('Badge') &&
                 index === 0 &&
                 childClone.tagName === 'rect' &&
                 childClone.properties!.fill

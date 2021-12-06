@@ -9,12 +9,8 @@ const green = chalk.greenBright
 const grey = chalk.gray
 
 const tableConfig = {
-    head: [
-        header('📛 Icon Name'),
-        header('🤞 SVG Size'),
-        header('🤞 Component Size'),
-    ],
-    colWidths: [30, 20, 20],
+    head: [header('📛 Icon Name'), header('🤞 SVG Size')],
+    colWidths: [30, 20],
 }
 
 /**
@@ -44,10 +40,9 @@ export async function consolify(consoleData: string[][]) {
 
     const data = await Promise.all(
         consoleData.map(async (componentData) => {
-            const [fileName, svgFilePath, componentFilePath] = componentData
+            const [fileName, svgFilePath] = componentData
             const { size: svgFileSize } = await fs.stat(svgFilePath)
-            const { size: componentFileSize } = await fs.stat(componentFilePath)
-            return [fileName, bToKb(svgFileSize), bToKb(componentFileSize)]
+            return [fileName, bToKb(svgFileSize)]
         })
     )
 
