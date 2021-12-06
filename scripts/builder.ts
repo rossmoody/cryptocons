@@ -10,22 +10,26 @@ import {
     componentize,
     sort,
     consolify,
+    tagify,
 } from '.'
 
 const svgDirPath = path.join(__dirname, '../src/svg')
 const componentDirPath = path.join(__dirname, '../src/components')
 const exportFilePath = path.join(componentDirPath, '/index.ts')
+const metaFilePath = path.join(__dirname, '../src/metadata.json')
 
 ;(async () => {
+    const svgDirectory = await fs.readdir(svgDirPath)
+
     console.log(`Starting to build icon components from ${svgDirPath}`)
 
     const consoleData: string[][] = []
-    const svgDirectory = await fs.readdir(svgDirPath)
+    const tagData: string[] = []
 
     await fs.rmdir(componentDirPath, { recursive: true })
     await fs.mkdir(componentDirPath)
 
-    const exports = await Promise.all(
+    Promise.all(
         svgDirectory.map(async (file) => {
             const fileName = file.slice(0, -4)
             const svgFilePath = `${svgDirPath}/${fileName}.svg`
@@ -49,12 +53,16 @@ const exportFilePath = path.join(componentDirPath, '/index.ts')
             await fs.writeFile(svgFilePath, prettiedSvg)
             await fs.writeFile(componentFilePath, prettiedComponent)
 
+            tagData.push(fileName)
             consoleData.push([fileName, svgFilePath, componentFilePath])
 
             return [fileName, exportString]
         })
-    )
+    ).then((result) => {
+        const tags = tagify(tagData)
 
-    consolify(consoleData)
-    fs.writeFile(exportFilePath, sort(exports))
+        consolify(consoleData)
+        fs.writeFile(metaFilePath, tags)
+        fs.writeFile(exportFilePath, sort(result))
+    })
 })()
