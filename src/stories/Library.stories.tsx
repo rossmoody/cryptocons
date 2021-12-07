@@ -1,7 +1,9 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import * as icons from '../components'
-import { AcalaNetwork, AcalaNetworkBadge } from '..'
+import { Binance, BinanceBadge } from '..'
+import { Badge } from '../Badge'
+import { Logo } from '../Logo'
 import { IconProps } from '..'
 
 export default {
@@ -15,8 +17,8 @@ export default {
 export const OneExample: Story<IconProps> = ({}) => {
     return (
         <>
-            <AcalaNetwork />
-            <AcalaNetworkBadge />
+            <Binance />
+            <BinanceBadge />
         </>
     )
 }
@@ -27,6 +29,14 @@ export const NoArgs: Story<IconProps> = ({}) => (
             return <Icon key={displayName} />
         })}
     </React.Fragment>
+)
+
+export const BadgeIconExample: Story<IconProps> = (args) => (
+    <Badge icon="BinanceBadge" {...args} />
+)
+
+export const LogoExample: Story<IconProps> = (args) => (
+    <Logo icon="Binance" {...args} />
 )
 
 export const AllIcons: Story<IconProps> = (args) => (

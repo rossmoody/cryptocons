@@ -11,12 +11,14 @@ import {
     sort,
     consolify,
     tagify,
+    typify,
 } from '.'
 
 const svgDirPath = path.join(__dirname, '../src/svg')
 const componentDirPath = path.join(__dirname, '../src/components')
 const exportFilePath = path.join(componentDirPath, '/index.ts')
 const metaFilePath = path.join(__dirname, '../src/metadata.json')
+const typeFilePath = path.join(__dirname, '../src/types.ts')
 
 ;(async () => {
     const svgDirectory = await fs.readdir(svgDirPath)
@@ -24,27 +26,27 @@ const metaFilePath = path.join(__dirname, '../src/metadata.json')
     console.log(`Starting to build icon components from ${svgDirPath}`)
 
     const consoleData: string[][] = []
-    const filenames: string[] = []
+    const componentNames: string[] = []
 
     await fs.rmdir(componentDirPath, { recursive: true })
     await fs.mkdir(componentDirPath)
 
     Promise.all(
         svgDirectory.map(async (file) => {
-            const fileName = file.slice(0, -4)
-            const svgFilePath = `${svgDirPath}/${fileName}.svg`
-            const componentFilePath = `${componentDirPath}/${fileName}.tsx`
-            const exportString = `export * from './${fileName}'`
+            const componentName = file.slice(0, -4)
+            const svgFilePath = `${svgDirPath}/${componentName}.svg`
+            const componentFilePath = `${componentDirPath}/${componentName}.tsx`
+            const exportString = `export * from './${componentName}'`
 
             const svg = await fs.readFile(svgFilePath)
-            const cleaned = clean(svg, fileName)
+            const cleaned = clean(svg, componentName)
             const parsed = parse(cleaned)
             const transformed = transform(parsed)
-            const processed = process(transformed, fileName)
+            const processed = process(transformed, componentName)
             const stringified = stringify(processed)
             const componentized = componentize(
                 stringified,
-                fileName,
+                componentName,
                 processed.rectFill
             )
 
@@ -53,14 +55,19 @@ const metaFilePath = path.join(__dirname, '../src/metadata.json')
             await fs.writeFile(svgFilePath, prettiedSvg)
             await fs.writeFile(componentFilePath, prettiedComponent)
 
-            filenames.push(fileName)
-            consoleData.push([fileName, svgFilePath])
+            componentNames.push(componentName)
+            consoleData.push([componentName, svgFilePath])
 
-            return [fileName, exportString]
+            return [componentName, exportString]
         })
-    ).then((result) => {
+    ).then((exportData) => {
+        const sortedExportData = sort(exportData)
+        const tagged = tagify(componentNames)
+        const typed = pretty(typify(componentNames))
+
+        fs.writeFile(metaFilePath, tagged)
+        fs.writeFile(exportFilePath, sortedExportData)
+        fs.writeFile(typeFilePath, typed)
         consolify(consoleData)
-        fs.writeFile(metaFilePath, tagify(filenames))
-        fs.writeFile(exportFilePath, sort(result))
     })
 })()
