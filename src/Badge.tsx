@@ -3,11 +3,11 @@ import * as icons from './components'
 import { IconProps } from './Icon'
 import { BadgeNames } from './types'
 
-export interface BadgeIconProps extends IconProps {
+export interface BadgeProps extends IconProps {
     icon: BadgeNames
 }
 
-export const Badge = forwardRef<SVGSVGElement, BadgeIconProps>((props, ref) => {
+export const Badge = forwardRef<SVGSVGElement, BadgeProps>((props, ref) => {
     const { icon, ...rest } = props
     const Icon = icons[icon]
 

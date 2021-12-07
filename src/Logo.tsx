@@ -3,11 +3,11 @@ import * as icons from './components'
 import { IconProps } from './Icon'
 import { LogoNames } from './types'
 
-export interface LogoIconProps extends IconProps {
+export interface LogoProps extends Omit<IconProps, 'badgeRadius'> {
     icon: LogoNames
 }
 
-export const Logo = forwardRef<SVGSVGElement, LogoIconProps>((props, ref) => {
+export const Logo = forwardRef<SVGSVGElement, LogoProps>((props, ref) => {
     const { icon = 'BinanceBadge', ...rest } = props
 
     const Icon = icons[icon]
