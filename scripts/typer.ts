@@ -3,6 +3,9 @@ interface IconNames {
     logo: string[]
 }
 
+/**
+ * Creates type definitions for icon names used in Logo and Badge components.
+ */
 export function typify(filenames: string[]) {
     const sortedNames = filenames.reduce(
         (accumulator, iconName) => {

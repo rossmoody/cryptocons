@@ -13,7 +13,7 @@ interface CreateIconOptions {
 }
 
 /**
- * Convenience function around the Icon component that also sets tags.
+ * Convenience function around the Icon component for making icons.
  */
 export function createIcon(options: CreateIconOptions) {
     const { path, rectFill } = options

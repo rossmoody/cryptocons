@@ -3,7 +3,8 @@ import React, { forwardRef } from 'react'
 export interface IconProps extends React.SVGAttributes<SVGElement> {
     /**
      * Proportionally sets the width and height of the SVG element.
-     * To define the width and height manually, set to 0.
+     * To define the width and height manually (not recommended), set to 0.
+     * Defaults to 24.
      */
     size?: string | number
     /**

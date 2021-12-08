@@ -1,11 +1,11 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 import * as icons from '../components'
-
-import { IconProps } from '..'
+import { Icon, IconProps } from '..'
 
 export default {
     title: 'Libraries',
+    component: Icon,
     args: {
         size: 60,
         badgeRadius: 8,
