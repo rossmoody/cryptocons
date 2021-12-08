@@ -15,24 +15,24 @@ const SEO = ({ title, description, pathname, image, children }: Props) => {
 
     const {
         siteTitle,
-        siteTitleAlt: defaultTitle,
+        siteTitleAlt,
         siteUrl,
-        siteDescription: defaultDescription,
+        siteDescription,
         siteLanguage,
-        siteImage: defaultImage,
+        siteImage,
         author,
     } = site
 
     const seo = {
-        title: title || defaultTitle,
-        description: description || defaultDescription,
+        title: title || siteTitleAlt,
+        description: description || siteDescription,
         url: `${siteUrl}${pathname || ``}`,
-        image: `${siteUrl}${image || defaultImage}`,
+        image: `${siteUrl}${image || siteImage}`,
     }
     return (
         <Helmet
             title={title}
-            defaultTitle={defaultTitle}
+            defaultTitle={`${siteTitleAlt} - ${siteDescription}`}
             titleTemplate={`%s | ${siteTitle}`}
         >
             <html lang={siteLanguage} />
@@ -44,12 +44,12 @@ const SEO = ({ title, description, pathname, image, children }: Props) => {
             <meta property="og:image" content={seo.image} />
             <meta property="og:type" content="website" />
             <meta property="og:image:alt" content={seo.description} />
-            <meta name="twitter:title" content={seo.title} />
-            <meta name="twitter:image" content={seo.image} />
-            <meta name="twitter:image:alt" content={seo.description} />
             <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content={seo.title} />
             <meta name="twitter:url" content={seo.url} />
             <meta name="twitter:description" content={seo.description} />
+            <meta name="twitter:image" content={seo.image} />
+            <meta name="twitter:image:alt" content={seo.description} />
             <meta name="twitter:creator" content={author} />
             {children}
         </Helmet>
