@@ -1,3 +1,5 @@
+export * from './BLThreeP'
+export * from './BLThreePBadge'
 export * from './Binance'
 export * from './BinanceBadge'
 export * from './BitMart'

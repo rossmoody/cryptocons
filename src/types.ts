@@ -1,4 +1,5 @@
 export type LogoNames =
+    | 'BLThreeP'
     | 'Binance'
     | 'BitMart'
     | 'Bitbank'
@@ -35,6 +36,7 @@ export type LogoNames =
     | 'WazirX'
 
 export type BadgeNames =
+    | 'BLThreePBadge'
     | 'BinanceBadge'
     | 'BitMartBadge'
     | 'BitbankBadge'

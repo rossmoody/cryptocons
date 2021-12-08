@@ -1,4 +1,6 @@
 {
+    "BLThreeP": ["exchange"],
+    "BLThreePBadge": ["exchange"],
     "Binance": ["exchange"],
     "BinanceBadge": ["exchange"],
     "BitMart": ["exchange"],

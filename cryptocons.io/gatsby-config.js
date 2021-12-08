@@ -1,7 +1,13 @@
 module.exports = {
     siteMetadata: {
-        siteUrl: 'https://www.yourdomain.tld',
-        title: 'cryptocons.io',
+        siteTitle: 'cryptocons.io',
+        siteTitleAlt: 'cryptocons.io',
+        siteHeadline: 'Cryptocurrency icons as tidy React components.',
+        siteUrl: 'https://cryptocons.io',
+        siteDescription: 'Cryptocurrency icons as tidy React components.',
+        siteLanguage: 'en',
+        siteImage: '/og-image.png',
+        author: '@_rossmoody',
     },
     plugins: [
         '@chakra-ui/gatsby-plugin',
