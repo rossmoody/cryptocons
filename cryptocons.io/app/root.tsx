@@ -12,7 +12,7 @@ const seo = {
     title: 'Cryptocons.io',
     description: 'Cryptocurrency logos and icons as tidy React components.',
     url: 'https://cryptocons.io',
-    image: '/og-image.png',
+    image: '/images/og-image.png',
     author: '@_rossmoody',
     website: 'website',
 }
