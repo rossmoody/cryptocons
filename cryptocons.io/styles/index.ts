@@ -23,8 +23,8 @@ export {
   darkTheme,
   styled,
   css,
-  globalCss,
   globalStyles,
   reset,
+  globalCss,
   styledKeyframes,
 }

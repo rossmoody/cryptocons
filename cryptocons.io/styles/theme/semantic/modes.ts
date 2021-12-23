@@ -7,7 +7,7 @@ export const darkMode = {
   colors: {
     ...colors,
     //
-    _backgroundBody: colors.grey00,
+    _backgroundBody: colors.red30,
     _textDefault: colors.grey80,
     _textProminent: colors.grey90,
     _textMuted: colors.grey50,
