@@ -630,11 +630,6 @@ cross-spawn@^7.0.1:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-cryptocons@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/cryptocons/-/cryptocons-1.0.2.tgz#6580702ffd02bb937a26536d40ffa16bebcc8139"
-  integrity sha512-kMDWIvqINZC3vwqUkJIUVjxsVu8quWvdl2uisO8B7Q8YbYf4qpYbeJUhrAr0wVziIyRbdTLderNbcBhbVpXtjw==
-
 csstype@^3.0.2:
   version "3.0.10"
   resolved "https://registry.npmjs.org/csstype/-/csstype-3.0.10.tgz"
