@@ -13,7 +13,8 @@
     "scripts": {
         "rollup": "rollup -c",
         "build": "ts-node scripts/builder",
-        "storybook": "start-storybook -p 6006"
+        "storybook": "start-storybook -p 6006",
+        "build-site": "cd cryptocons.io && yarn build"
     },
     "prettier": {
         "trailingComma": "es5",
