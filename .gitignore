@@ -83,11 +83,9 @@ typings/
 .nuxt
 dist
 
-# Remix
+# Next
 **/*/.cache
-**/*/public/build
 **/*/node_modules
-*/netlify/functions/server/build
 */.netlify
 
 # vuepress build output
