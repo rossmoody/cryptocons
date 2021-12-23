@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
-import * as icons from './components'
 import { IconProps } from './Icon'
 import { BadgeNames } from './types'
+import * as icons from './components'
 
 export interface CryptoBadgeProps extends IconProps {
     icon: BadgeNames

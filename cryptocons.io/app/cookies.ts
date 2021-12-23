@@ -1,6 +1,6 @@
 import { createCookie } from 'remix'
 
-export let colorSchemeCookie = createCookie('color-scheme')
+export const colorSchemeCookie = createCookie('color-scheme')
 
 export const getColorSchemeToken = async (request: Request) =>
     await colorSchemeCookie.parse(request.headers.get('Cookie'))
@@ -11,5 +11,5 @@ export const getColorScheme = async (request: Request) => {
         'Sec-CH-Prefers-Color-Scheme'
     )
 
-    return userSelectedColorScheme ?? systemPreferredColorScheme
+    return userSelectedColorScheme ?? systemPreferredColorScheme ?? 'light'
 }

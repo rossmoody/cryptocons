@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
-import * as icons from './components'
 import { IconProps } from './Icon'
 import { BadgeNames, LogoNames } from './types'
+import * as icons from './components'
 
 export type CryptoconNames = BadgeNames | LogoNames
 

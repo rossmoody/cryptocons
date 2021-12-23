@@ -1,6 +1,6 @@
-import { Button } from '~/components/Button'
 import { ActionFunction, Form, redirect } from 'remix'
 import { colorSchemeCookie, getColorScheme } from '../cookies'
+import { Button } from '~/components/Button'
 
 export const action: ActionFunction = async ({ request }) => {
     const currentColorScheme = await getColorScheme(request)

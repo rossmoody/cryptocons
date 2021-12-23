@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
-import * as icons from './components'
 import { IconProps } from './Icon'
 import { LogoNames } from './types'
+import * as icons from './components'
 
 export interface CryptoLogoProps extends Omit<IconProps, 'badgeRadius'> {
     icon: LogoNames
