@@ -1,6 +1,6 @@
 import { ActionFunction, Form, redirect } from 'remix'
 import { colorSchemeCookie, getColorScheme } from '../cookies'
-import { Button } from '~/components/Button'
+import { Header } from '~/components/Header'
 
 export const action: ActionFunction = async ({ request }) => {
     const currentColorScheme = await getColorScheme(request)
@@ -14,9 +14,5 @@ export const action: ActionFunction = async ({ request }) => {
 }
 
 export default function Index() {
-    return (
-        <Form method="post">
-            <Button type="submit">Change Theme</Button>
-        </Form>
-    )
+    return <Header />
 }
