@@ -5,39 +5,28 @@ import {
     Outlet,
     Scripts,
     ScrollRestoration,
+    HeadersFunction,
+    LoaderFunction,
+    useLoaderData,
 } from 'remix'
-import type { MetaFunction } from 'remix'
+import { getColorScheme } from './cookies'
+import cssReset from './styles/reset.css'
 
-const seo = {
-    title: 'Cryptocons.io',
-    description: 'Cryptocurrency logos and icons as tidy React components.',
-    url: 'https://cryptocons.io',
-    image: '/images/og-image.png',
-    author: '@_rossmoody',
-    website: 'website',
-}
+export let links = () => [{ rel: 'stylesheet', href: cssReset }]
 
-export const meta: MetaFunction = () => ({
-    viewport: 'width=device-width,initial-scale=1',
-    title: seo.title,
-    description: seo.description,
-    image: `${seo.url}${seo.image}`,
-    ['og:title']: seo.title,
-    ['og:url']: seo.url,
-    ['og:description']: seo.description,
-    ['og:image']: `${seo.url}${seo.image}`,
-    ['og:type']: seo.website,
-    ['og:image:alt']: seo.description,
-    ['twitter:card']: 'summary_large_image',
-    ['twitter:title']: seo.title,
-    ['twitter:url']: seo.url,
-    ['twitter:description']: seo.description,
-    ['twitter:image']: `${seo.url}${seo.image}`,
-    ['twitter:image:alt']: seo.description,
-    ['twitter:creator']: seo.author,
+export { meta } from './components/Seo'
+
+export const headers: HeadersFunction = () => ({
+    'Accept-CH': 'Sec-CH-Prefers-Color-Scheme',
+})
+
+export const loader: LoaderFunction = async ({ request }) => ({
+    colorScheme: await getColorScheme(request),
 })
 
 export default function App() {
+    const { colorScheme } = useLoaderData()
+
     return (
         <html lang="en">
             <head>
@@ -45,7 +34,7 @@ export default function App() {
                 <Meta />
                 <Links />
             </head>
-            <body>
+            <body className={colorScheme}>
                 <Outlet />
                 <ScrollRestoration />
                 <Scripts />
