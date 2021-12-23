@@ -1,11 +1,5 @@
 {
-    "include": [
-        "remix.env.d.ts",
-        "**/*.ts",
-        "**/*.tsx",
-        "../src/**/*.ts",
-        "../src/**/*.tsx"
-    ],
+    "include": ["remix.env.d.ts", "**/*.ts", "**/*.tsx"],
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
