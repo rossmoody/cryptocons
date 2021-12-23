@@ -1,7 +1,7 @@
 import { Form } from 'remix'
 import { Flex } from './Flex'
 import { Button } from './Button'
-import { CryptoconLogo } from 'cryptocons'
+import { CryptoconLogo } from '../../../src/components/CryptoconLogo'
 
 export const Header = () => {
     return (
