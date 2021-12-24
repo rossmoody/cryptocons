@@ -1,4 +1,4 @@
-import { createStitches } from '@stitches/react'
+import { createStitches, CSS } from '@stitches/react'
 import { darkMode, lightMode } from './modes'
 import { utils } from './utils'
 

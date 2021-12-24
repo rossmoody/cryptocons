@@ -19,6 +19,7 @@ export default globalCss({
     lineHeight: '1.5',
     backgroundColor: '$gray1',
     color: '$gray12',
+    fontFamily: '$body',
   },
   'a:not([class])': {
     textDecorationSkipInk: 'auto',

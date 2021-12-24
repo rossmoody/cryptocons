@@ -3,8 +3,9 @@
     "baseUrl": ".",
     "paths": {
       "@styles": ["styles/index"],
-      "@components/*": ["components/*"],
-      "@layout/*": ["layout/*"]
+      "@components": ["components/"],
+      "@layout/*": ["layout/*"],
+      "@cryptocons": ["../dist/esm"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],

@@ -27,9 +27,9 @@ const typography = {
   },
 
   fonts: {
-    heading: '',
-    body: '',
-    mono: '',
+    heading: 'Inter, sans-serif',
+    body: 'Inter, sans-serif',
+    mono: 'Inter, sans-serif',
   },
 
   fontSizes: {

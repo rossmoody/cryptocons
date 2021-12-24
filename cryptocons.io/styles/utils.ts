@@ -1,8 +1,17 @@
 import type { ScaleValue } from '@stitches/react'
+import { lightMode } from './modes'
+
+type Color = `$${keyof typeof lightMode.colors}`
 
 type Space = ScaleValue<'space'>
 
 export const utils = {
+  bc: (value: Color) => ({
+    backgroundColor: value,
+  }),
+  c: (value: Color) => ({
+    color: value,
+  }),
   h: (value: Space) => ({
     height: value,
   }),
