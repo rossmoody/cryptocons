@@ -1,6 +1,6 @@
 import { createStitches } from '@stitches/react'
-import { utils } from './utils'
 import { darkMode, lightMode } from './modes'
+import { utils } from './utils'
 
 export const {
   styled,

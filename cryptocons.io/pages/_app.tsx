@@ -3,6 +3,8 @@ import globalStyles from '../styles/globalStyles'
 import { ThemeProvider } from 'next-themes'
 import { darkTheme, lightTheme } from '@styles'
 import { Meta } from '@layout/Meta'
+import { Layout } from '@layout/Layout'
+import { Header } from '@layout/Header'
 
 export default function App({ Component, pageProps }: AppProps) {
   globalStyles()
@@ -13,7 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
       value={{ light: lightTheme.className, dark: darkTheme.className }}
     >
       <Meta />
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ThemeProvider>
   )
 }

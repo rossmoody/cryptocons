@@ -18,6 +18,7 @@ export default globalCss({
     textRendering: 'optimizeSpeed',
     lineHeight: '1.5',
     backgroundColor: '$gray1',
+    color: '$gray12',
   },
   'a:not([class])': {
     textDecorationSkipInk: 'auto',

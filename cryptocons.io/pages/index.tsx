@@ -1,12 +1,7 @@
 import type { NextPage } from 'next'
-import { ThemeButton } from '../layout/ThemeButton'
 
 const Home: NextPage = () => {
-  return (
-    <>
-      <ThemeButton />
-    </>
-  )
+  return <>Hi</>
 }
 
 export default Home
