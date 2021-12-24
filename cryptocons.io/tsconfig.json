@@ -4,8 +4,7 @@
     "paths": {
       "@styles": ["styles/index"],
       "@components": ["components/"],
-      "@layout/*": ["layout/*"],
-      "@cryptocons": ["../dist/esm"]
+      "@layout/*": ["layout/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
