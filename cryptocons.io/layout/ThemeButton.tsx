@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Button } from '../components/Button'
 import { useTheme } from 'next-themes'
+import { Button } from '@components/Button'
 
 export const ThemeButton = () => {
   const [mounted, setMounted] = useState(false)

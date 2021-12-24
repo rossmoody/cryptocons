@@ -9,6 +9,10 @@ export const utils = {
   w: (value: Space) => ({
     width: value,
   }),
+  size: (value: Space) => ({
+    width: value,
+    height: value,
+  }),
   p: (value: Space) => ({
     padding: value,
   }),

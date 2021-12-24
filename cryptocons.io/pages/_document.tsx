@@ -1,5 +1,6 @@
+import React from 'react'
 import NextDocument, { Html, Head, Main, NextScript } from 'next/document'
-import { getCssText, reset } from '../styles'
+import { getCssText, reset } from '@styles'
 
 /**
  * Get the css and reset the internal css representation.
