@@ -1,6 +1,6 @@
 [build]
 base = "/cryptocons.io/"
-command = "yarn build"
+command = "cd ../ && yarn && yarn rollup && cd cryptocons.io && yarn build"
 publish = ".next"
 
 [[plugins]]
