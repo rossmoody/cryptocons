@@ -1,30 +1,19 @@
-import type * as Stitches from '@stitches/react'
-import globalStyles from './globalStyles'
-import styledKeyframes from './stitches/keyframes'
-import {
-  lightTheme,
-  darkTheme,
-  getCssText,
-  styled,
-  css,
-  globalCss,
-  reset,
-  config,
-  keyframes,
-} from './theme/semantic'
+import { createStitches } from '@stitches/react'
+import { utils } from './utils'
+import { darkMode, lightMode } from './modes'
 
-export type { VariantProps } from '@stitches/react'
-export type CSS = Stitches.CSS<typeof config>
-
-export {
-  keyframes,
-  getCssText,
-  lightTheme,
-  darkTheme,
+export const {
   styled,
+  theme: lightTheme,
   css,
-  globalStyles,
-  reset,
+  createTheme,
+  getCssText,
   globalCss,
-  styledKeyframes,
-}
+  keyframes,
+  reset,
+} = createStitches({
+  theme: lightMode,
+  utils,
+})
+
+export const darkTheme = createTheme(darkMode)

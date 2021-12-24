@@ -1,11 +1,4 @@
-import { globalCss } from './theme/semantic'
-
-const focus = {
-  '&:focus': {
-    outline: 'none',
-    boxShadow: '$outline',
-  },
-}
+import { globalCss } from '.'
 
 export default globalCss({
   '*, *::before, *::after': {
@@ -24,7 +17,7 @@ export default globalCss({
     minHeight: '100vh',
     textRendering: 'optimizeSpeed',
     lineHeight: '1.5',
-    backgroundColor: '$_backgroundBody',
+    backgroundColor: '$gray1',
   },
   'a:not([class])': {
     textDecorationSkipInk: 'auto',
@@ -45,6 +38,12 @@ export default globalCss({
       animationIterationCount: '1 !important',
       transitionDuration: '0.01ms !important',
       scrollBehavior: 'auto !important',
+    },
+  },
+  'a, button': {
+    '&:focus': {
+      outline: 'none',
+      boxShadow: '$outline',
     },
   },
 })

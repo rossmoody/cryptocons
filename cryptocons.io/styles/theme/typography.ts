@@ -27,9 +27,9 @@ const typography = {
   },
 
   fonts: {
-    heading: `"SplunkDataSans", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    body: `'SplunkDataSans', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
-    mono: `'SplunkDataSansMono', SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace`,
+    heading: '',
+    body: '',
+    mono: '',
   },
 
   fontSizes: {
