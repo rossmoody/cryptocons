@@ -1,5 +1,7 @@
 [build]
-publish = "cryptocons.io/.next"
+base = "/cryptocons.io/"
+command = "yarn build"
+publish = ".next"
 
 [[plugins]]
 package = "@netlify/plugin-nextjs"
