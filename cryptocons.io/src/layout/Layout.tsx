@@ -1,8 +1,8 @@
-import { Header } from './Header'
+import { Header } from '@components/header'
 
 export const Layout: React.FC = ({ children }) => (
-  <div>
+  <>
     <Header />
     <main>{children}</main>
-  </div>
+  </>
 )

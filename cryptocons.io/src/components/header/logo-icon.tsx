@@ -1,12 +1,6 @@
 import { createIcon } from '@cryptocons'
 
-export const Header = () => (
-  <header>
-    <Logo size="28" />
-  </header>
-)
-
-const Logo = createIcon({
+const LogoIcon = createIcon({
   path: (
     <>
       <rect
@@ -39,3 +33,5 @@ const Logo = createIcon({
     </>
   ),
 })
+
+export default LogoIcon
