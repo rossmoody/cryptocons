@@ -3,12 +3,12 @@ import {
   blue,
   red,
   green,
-  purple,
+  violet,
   grayDark,
   blueDark,
   redDark,
   greenDark,
-  purpleDark,
+  violetDark,
 } from '@radix-ui/colors'
 
 export {
@@ -20,6 +20,6 @@ export {
   blueDark,
   redDark,
   greenDark,
-  purple,
-  purpleDark,
+  violet,
+  violetDark,
 }

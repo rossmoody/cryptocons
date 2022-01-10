@@ -7,7 +7,7 @@ export const lightMode = {
     ...core.colors.blue,
     ...core.colors.red,
     ...core.colors.green,
-    ...core.colors.purple,
+    ...core.colors.violet,
   },
 }
 
@@ -17,6 +17,6 @@ export const darkMode = {
     ...core.colors.blueDark,
     ...core.colors.redDark,
     ...core.colors.greenDark,
-    ...core.colors.purpleDark,
+    ...core.colors.violetDark,
   },
 }

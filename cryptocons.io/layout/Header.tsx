@@ -1,4 +1,4 @@
-import { Box, Text, Center } from '@components'
+import { Box, Divider, Text, Center, Flex } from '@components'
 import { ThemeButton } from './ThemeButton'
 import { createIcon } from '@cryptocons'
 import { styled } from '@styles'
@@ -44,30 +44,43 @@ const StyledHeader = styled('header', {
   justifyContent: 'space-between',
   borderBottom: '1px solid $gray7',
   h: '$14',
-  px: '$04',
-  ['& a']: {
-    borderRadius: '$base',
-    textDecoration: 'none',
-  },
+  px: '$4',
 })
 
 export const Header = () => (
   <StyledHeader>
-    <Link href="/" passHref>
-      <Center as="a" aria-label="Navigate home">
-        <Logo size="28" />
-        <Box
+    <Flex align="center" gap={3}>
+      <Link href="/" passHref>
+        <Center
+          as="a"
+          aria-label="Navigate home"
           css={{
-            ml: '$0-5',
-            fontWeight: '$black',
-            fontSize: '$lg',
+            '&:hover': {
+              textDecoration: 'none',
+            },
           }}
         >
-          <Text css={{ c: '$gray12' }}>cryptocons</Text>
-          <Text css={{ c: '$purple11' }}>.io</Text>
-        </Box>
-      </Center>
-    </Link>
+          <Logo size="28" />
+          <Box
+            css={{
+              ml: '$1/2',
+              fontWeight: '$black',
+              fontSize: '$lg',
+            }}
+          >
+            <Text css={{ c: '$gray12' }}>cryptocons</Text>
+            <Text css={{ c: '$violet11' }}>.io</Text>
+          </Box>
+        </Center>
+      </Link>
+      <Divider data-orientation="vertical" css={{ h: '$5' }} />
+      <Text css={{ c: '$gray11', fontSize: '$xs' }}>
+        👋 Want to help?{' '}
+        <Link href="#" passHref>
+          <a>Submit an icon</a>
+        </Link>
+      </Text>
+    </Flex>
     <ThemeButton />
   </StyledHeader>
 )

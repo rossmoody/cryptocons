@@ -1,4 +1,4 @@
-import { createStitches, CSS } from '@stitches/react'
+import { createStitches, CSS as StitcheCSS } from '@stitches/react'
 import { darkMode, lightMode } from './modes'
 import { utils } from './utils'
 
@@ -11,9 +11,12 @@ export const {
   globalCss,
   keyframes,
   reset,
+  config,
 } = createStitches({
   theme: lightMode,
   utils,
 })
 
 export const darkTheme = createTheme(darkMode)
+
+export type CSS = StitcheCSS<typeof config>

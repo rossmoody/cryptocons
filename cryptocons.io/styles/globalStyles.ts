@@ -16,7 +16,7 @@ export default globalCss({
   body: {
     minHeight: '100vh',
     textRendering: 'optimizeSpeed',
-    lineHeight: '1.5',
+    lineHeight: '$base',
     backgroundColor: '$gray1',
     color: '$gray12',
     fontFamily: '$body',
@@ -41,6 +41,17 @@ export default globalCss({
       transitionDuration: '0.01ms !important',
       scrollBehavior: 'auto !important',
     },
+  },
+  // Global styles. Not resets.
+  a: {
+    color: '$violet11',
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'underline',
+    },
+  },
+  button: {
+    border: 'none',
   },
   'a, button': {
     '&:focus': {
