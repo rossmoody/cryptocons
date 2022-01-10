@@ -1,8 +1,10 @@
-import { Box, Divider, Text, Center, Flex } from '@components'
-import { ThemeButton } from './ThemeButton'
 import { createIcon } from '@cryptocons'
-import { styled } from '@styles'
-import Link from 'next/link'
+
+export const Header = () => (
+  <header>
+    <Logo size="28" />
+  </header>
+)
 
 const Logo = createIcon({
   path: (
@@ -37,50 +39,3 @@ const Logo = createIcon({
     </>
   ),
 })
-
-const StyledHeader = styled('header', {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'space-between',
-  borderBottom: '1px solid $gray7',
-  h: '$14',
-  px: '$4',
-})
-
-export const Header = () => (
-  <StyledHeader>
-    <Flex align="center" gap={3}>
-      <Link href="/" passHref>
-        <Center
-          as="a"
-          aria-label="Navigate home"
-          css={{
-            '&:hover': {
-              textDecoration: 'none',
-            },
-          }}
-        >
-          <Logo size="28" />
-          <Box
-            css={{
-              ml: '$1/2',
-              fontWeight: '$black',
-              fontSize: '$lg',
-            }}
-          >
-            <Text css={{ c: '$gray12' }}>cryptocons</Text>
-            <Text css={{ c: '$violet11' }}>.io</Text>
-          </Box>
-        </Center>
-      </Link>
-      <Divider data-orientation="vertical" css={{ h: '$5' }} />
-      <Text css={{ c: '$gray11', fontSize: '$xs' }}>
-        👋 Want to help?{' '}
-        <Link href="#" passHref>
-          <a>Submit an icon</a>
-        </Link>
-      </Text>
-    </Flex>
-    <ThemeButton />
-  </StyledHeader>
-)
