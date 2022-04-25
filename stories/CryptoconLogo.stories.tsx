@@ -1,6 +1,6 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react'
 import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-import { CryptoconLogo } from '..'
+import { CryptoconLogo } from '../src'
 
 export default {
     title: 'CryptoLogo Component',
