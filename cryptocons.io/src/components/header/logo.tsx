@@ -8,14 +8,19 @@ const Logo = () => (
         <LogoIcon size="28" className="mr-1" />
         <span className="font-extrabold text-lg text-slate-800 dark:text-slate-100">
           cryptocons
-          <span className="text-violet-600 dark:text-violet-500">.io</span>
+          <span className="text-indigo-600 dark:text-indigo-500">.io</span>
         </span>
       </a>
     </Link>
-    <div className="hidden lg:block w-0.5 h-4 bg-slate-200" />
+    <div className="hidden lg:block h-4 border-r-2 brdr" />
     <div className="hidden lg:block text-xs ">
       <span className="font-medium">👋 Want to help? </span>
-      <a href="#">Submit an icon</a>
+      <a
+        href="#"
+        className="text-indigo-500 dark:text-indigo-400 hover:text-indigo-600 dark:hover:text-indigo-500"
+      >
+        Submit an icon
+      </a>
     </div>
   </div>
 )

@@ -1,7 +1,3 @@
-import type { NextPage } from 'next'
+import HomeLayout from '@layout/Home'
 
-const Home: NextPage = () => {
-  return <></>
-}
-
-export default Home
+export default HomeLayout

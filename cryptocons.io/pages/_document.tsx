@@ -8,7 +8,7 @@ export default class Document extends NextDocument {
         <Head>
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         </Head>
-        <body className="text-slate-800 dark:text-slate-50 dark:bg-slate-900">
+        <body className="text-slate-800 dark:text-slate-50 dark:bg-slate-900 h-screen">
           <Main />
           <NextScript />
         </body>

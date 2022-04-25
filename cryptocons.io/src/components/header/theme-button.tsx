@@ -1,20 +1,24 @@
 import { useTheme } from 'next-themes'
-import { ButtonHTMLAttributes } from 'react'
+import { useEffect, useState } from 'react'
 
-type ThemeButton = React.FC<ButtonHTMLAttributes<HTMLButtonElement>>
-
-const ThemeButton: ThemeButton = (props) => {
-  const { children, type = 'button', ...rest } = props
+const ThemeButton = () => {
+  const [mounted, setMounted] = useState(false)
   const { theme, resolvedTheme, setTheme } = useTheme()
+
+  useEffect(() => setMounted(true), [])
 
   return (
     <button
-      type={type}
+      type="button"
       aria-label="Toggle Dark Mode"
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-      {...rest}
+      className="w-7 h-7 text-slate-700 dark:text-slate-300 dark:hover:bg-slate-800 hover:bg-slate-100 rounded-md items-center flex justify-center"
     >
-      {resolvedTheme === 'dark' ? <LightThemeIcon /> : <DarkThemeIcon />}
+      {mounted && resolvedTheme === 'dark' ? (
+        <LightThemeIcon />
+      ) : (
+        <DarkThemeIcon />
+      )}
     </button>
   )
 }
