@@ -1,6 +1,6 @@
-import fs from 'fs/promises'
-import Table from 'cli-table'
 import chalk from 'chalk'
+import Table from 'cli-table'
+import fs from 'fs/promises'
 import { sortByFilename } from './sortify'
 
 const header = chalk.white.bold
@@ -9,7 +9,7 @@ const green = chalk.greenBright
 const grey = chalk.gray
 
 const tableConfig = {
-    head: [header('📛 Icon Name'), header('🤞 SVG Size')],
+    head: [header('Icon Name'), header('File Size')],
     colWidths: [30, 20],
 }
 
