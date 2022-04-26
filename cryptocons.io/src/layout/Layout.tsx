@@ -1,8 +1,13 @@
 import Header from '@components/header'
+import { ReactNode } from 'react'
 
-export const Layout: React.FC = ({ children }) => (
-  <div className="h-screen w-screen overflow-hidden">
-    <Header />
-    {children}
-  </div>
+type Children = {
+    children: ReactNode
+}
+
+export const Layout = ({ children }: Children) => (
+    <div className="h-screen w-screen overflow-hidden">
+        <Header />
+        {children}
+    </div>
 )
