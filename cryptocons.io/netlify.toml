@@ -1,8 +1,0 @@
-[build]
-base = "./cryptocons.io"
-publish = ".next"
-command = "cd ../ && yarn && yarn rollup && cd cryptocons.io && yarn build"
-
-
-[[plugins]]
-package = "@netlify/plugin-nextjs"
