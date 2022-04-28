@@ -1,7 +1,7 @@
 import React from 'react'
 import { createIcon } from '../createIcon'
 
-export const DogecoinBadgeBadge = createIcon({
+export const DogecoinBadge = createIcon({
     path: (
         <>
             <path
