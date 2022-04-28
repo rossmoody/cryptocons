@@ -6,7 +6,7 @@ export const Bitflyer = createIcon({
         <>
             <path d="M2 2H8.02712V8.02712H2V2Z" fill="#3498D4"></path>
             <path
-                d="M2 8.98582H8.02712V15.0129H2V8.98582Z"
+                d="M2 8.98584H8.02712V15.013H2V8.98584Z"
                 fill="#3498D4"
             ></path>
             <path d="M2 15.9729H8.02712V22H2V15.9729Z" fill="#3498D4"></path>

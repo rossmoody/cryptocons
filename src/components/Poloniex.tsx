@@ -6,31 +6,31 @@ export const Poloniex = createIcon({
         <>
             <g clipPath="url(#Poloniex_a)">
                 <path
-                    d="M2 3.37562V20.6244C2 21.3841 2.61588 22 3.37561 22H20.6244C21.3841 22 22 21.3841 22 20.6244V3.37562C22 2.61588 21.3841 2 20.6244 2H3.37561C2.61588 2 2 2.61588 2 3.37562Z"
+                    d="M2 3.37556V20.6243C2 21.3841 2.61588 21.9999 3.37561 21.9999H20.6244C21.3841 21.9999 22 21.3841 22 20.6243V3.37556C22 2.61582 21.3841 1.99994 20.6244 1.99994H3.37561C2.61588 1.99994 2 2.61582 2 3.37556Z"
                     fill="url(#Poloniex_b)"
                 ></path>
                 <path
-                    d="M4.49968 6.98108H7.64219L11.2939 12.3341L9.53411 12.7254L8.07058 12.3341L4.49968 6.98108Z"
+                    d="M4.49966 6.98105H7.64218L11.2939 12.3341L9.53409 12.7254L8.07057 12.3341L4.49966 6.98105Z"
                     fill="url(#Poloniex_c)"
                 ></path>
                 <path
-                    d="M4.33502 17.6866H7.47754L11.2939 12.3341H8.07057L4.33502 17.6866Z"
+                    d="M4.33502 17.6867H7.47754L11.2939 12.3341H8.07057L4.33502 17.6867Z"
                     fill="url(#Poloniex_d)"
                 ></path>
                 <path
-                    d="M9.11336 6.98108H12.2564L15.9076 12.3341L14.1808 12.7473L12.6807 12.3341L9.11336 6.98108Z"
+                    d="M9.11337 6.98105H12.2564L15.9076 12.3341L14.1808 12.7472L12.6807 12.3341L9.11337 6.98105Z"
                     fill="url(#Poloniex_e)"
                 ></path>
                 <path
-                    d="M16.3395 6.98108H19.4826L16.6211 11.2985L15.0076 8.93499L16.3395 6.98108Z"
+                    d="M16.3395 6.98105H19.4826L16.6211 11.2985L15.0076 8.93496L16.3395 6.98105Z"
                     fill="url(#Poloniex_f)"
                 ></path>
                 <path
-                    d="M13.6757 6.98108H14.8866L14.2906 7.88105L13.6757 6.98108Z"
+                    d="M13.6757 6.98105H14.8866L14.2905 7.88102L13.6757 6.98105Z"
                     fill="url(#Poloniex_g)"
                 ></path>
                 <path
-                    d="M16.5225 17.6867H19.6655L16.6322 13.3185L15.0076 15.5758L16.5225 17.6867Z"
+                    d="M16.5225 17.6867H19.6655L16.6322 13.3185L15.0076 15.5757L16.5225 17.6867Z"
                     fill="url(#Poloniex_h)"
                 ></path>
                 <path
@@ -38,7 +38,7 @@ export const Poloniex = createIcon({
                     fill="url(#Poloniex_i)"
                 ></path>
                 <path
-                    d="M8.94872 17.6866H12.0587L15.9076 12.3341H12.6807L8.94872 17.6866Z"
+                    d="M8.94873 17.6867H12.0587L15.9076 12.3341H12.6807L8.94873 17.6867Z"
                     fill="url(#Poloniex_j)"
                 ></path>
             </g>
@@ -46,9 +46,9 @@ export const Poloniex = createIcon({
                 <linearGradient
                     id="Poloniex_b"
                     x1="11.9997"
-                    y1="22"
+                    y1="21.9999"
                     x2="11.9997"
-                    y2="2"
+                    y2="1.99994"
                     gradientUnits="userSpaceOnUse"
                 >
                     <stop stopColor="#D1D5D8"></stop>
@@ -56,9 +56,9 @@ export const Poloniex = createIcon({
                 </linearGradient>
                 <linearGradient
                     id="Poloniex_c"
-                    x1="5.47795"
-                    y1="6.25273"
-                    x2="8.56811"
+                    x1="5.47794"
+                    y1="6.2527"
+                    x2="8.56809"
                     y2="12.0688"
                     gradientUnits="userSpaceOnUse"
                 >
@@ -79,9 +79,9 @@ export const Poloniex = createIcon({
                 <linearGradient
                     id="Poloniex_e"
                     x1="10.0723"
-                    y1="6.46708"
+                    y1="6.46705"
                     x2="12.953"
-                    y2="11.8683"
+                    y2="11.8682"
                     gradientUnits="userSpaceOnUse"
                 >
                     <stop stopColor="#005661"></stop>
@@ -92,7 +92,7 @@ export const Poloniex = createIcon({
                     x1="16.0329"
                     y1="10.6079"
                     x2="16.0329"
-                    y2="6.41041"
+                    y2="6.41038"
                     gradientUnits="userSpaceOnUse"
                 >
                     <stop stopColor="#676F74"></stop>
@@ -101,9 +101,9 @@ export const Poloniex = createIcon({
                 <linearGradient
                     id="Poloniex_g"
                     x1="13.1515"
-                    y1="6.41042"
+                    y1="6.41039"
                     x2="13.1515"
-                    y2="7.28548"
+                    y2="7.28545"
                     gradientUnits="userSpaceOnUse"
                 >
                     <stop stopColor="#93989C"></stop>
@@ -112,7 +112,7 @@ export const Poloniex = createIcon({
                 <linearGradient
                     id="Poloniex_h"
                     x1="16.4813"
-                    y1="16.3387"
+                    y1="16.3386"
                     x2="14.7556"
                     y2="13.717"
                     gradientUnits="userSpaceOnUse"
@@ -133,7 +133,7 @@ export const Poloniex = createIcon({
                 </linearGradient>
                 <linearGradient
                     id="Poloniex_j"
-                    x1="9.90393"
+                    x1="9.90394"
                     y1="16.8921"
                     x2="12.795"
                     y2="11.5426"

@@ -1,16 +1,16 @@
-import path from 'path'
 import fs from 'fs/promises'
+import path from 'path'
 import {
     clean,
+    componentize,
+    consolify,
     parse,
-    stringify,
-    transform,
     pretty,
     process,
-    componentize,
     sort,
-    consolify,
+    stringify,
     tagify,
+    transform,
     typify,
 } from '.'
 
@@ -28,7 +28,7 @@ const typeFilePath = path.join(__dirname, '../src/types.ts')
     const consoleData: string[][] = []
     const componentNames: string[] = []
 
-    await fs.rmdir(componentDirPath, { recursive: true })
+    await fs.rm(componentDirPath, { recursive: true })
     await fs.mkdir(componentDirPath)
 
     Promise.all(

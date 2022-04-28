@@ -5,7 +5,7 @@ export const Bitvavo = createIcon({
     path: (
         <>
             <path
-                d="M10.6944 4.69998H16.5899L7.88564 19.2899H2L10.6944 4.69998Z"
+                d="M10.6944 4.70001H16.5899L7.88564 19.29H2L10.6944 4.70001Z"
                 fill="black"
             ></path>
             <path
