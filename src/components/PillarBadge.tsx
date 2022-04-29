@@ -9,11 +9,11 @@ export const PillarBadge = createIcon({
                 fill="black"
             ></path>
             <path
-                d="M5.59998 17L9.0908 20V17H18.4V6.99996L14.909 4V14.0001H5.59998V17Z"
+                d="M5.60001 17L9.09083 20V17H18.4V6.99996L14.909 4V14.0001H5.60001V17Z"
                 fill="white"
             ></path>
             <path
-                d="M10.2545 6.00008H5.59998V10.0001H10.2545V6.00008Z"
+                d="M10.2545 6.00008H5.60001V10.0001H10.2545V6.00008Z"
                 fill="white"
             ></path>
         </>

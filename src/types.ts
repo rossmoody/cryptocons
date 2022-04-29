@@ -66,6 +66,7 @@ export type LogoNames =
     | 'Hedera'
     | 'Horizen'
     | 'HuobiGlobal'
+    | 'HushHush'
     | 'Indodax'
     | 'Infura'
     | 'Injective'
@@ -129,6 +130,7 @@ export type LogoNames =
 export type BadgeNames =
     | 'AbbcBadge'
     | 'AcalaNetworkBadge'
+    | 'AidosKuneenBadge'
     | 'AionBadge'
     | 'AlgorandBadge'
     | 'AlqoBadge'
@@ -185,6 +187,7 @@ export type BadgeNames =
     | 'HederaBadge'
     | 'HorizenBadge'
     | 'HuobiGlobalBadge'
+    | 'HushHushBadge'
     | 'IndodaxBadge'
     | 'InfuraBadge'
     | 'InjectiveBadge'

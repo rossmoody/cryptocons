@@ -25,7 +25,7 @@ export const Xmx = createIcon({
                 fill="#56B3ED"
             ></path>
             <path
-                d="M11.9278 5.37165L2.44276 3.0862V2L11.9278 4.29757V5.37165Z"
+                d="M11.9278 5.37165L2.44275 3.0862V2L11.9278 4.29757V5.37165Z"
                 fill="#56B3ED"
             ></path>
             <path

@@ -41,7 +41,7 @@ export const Decentraland = createIcon({
             <path
                 fillRule="evenodd"
                 clipRule="evenodd"
-                d="M15.4153 16H2.8353C3.1453 16.715 3.5403 17.385 4.0003 18H15.4203V16H15.4153V16Z"
+                d="M15.4153 16H2.8353C3.1453 16.715 3.5403 17.385 4.0003 18H15.4203V16H15.4153Z"
                 fill="#FFBC5B"
             ></path>
             <path
