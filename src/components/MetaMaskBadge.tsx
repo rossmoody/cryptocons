@@ -9,7 +9,7 @@ export const MetaMaskBadge = createIcon({
                 fill="#EAE0D7"
             ></path>
             <path
-                d="M18.6929 5L12.8918 9.3266L13.9645 6.77397L18.6929 5Z"
+                d="M18.6929 5L12.8918 9.3266L13.9645 6.77396L18.6929 5Z"
                 fill="#E2761B"
             ></path>
             <path
