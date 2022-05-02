@@ -10,7 +10,7 @@ export const EthereumBadge = createIcon({
             ></path>
             <g clipPath="url(#EthereumBadge_a)">
                 <path
-                    d="M11.9984 3L11.8812 3.38729V14.6256L11.9984 14.7393L17.3652 11.6557L11.9984 3Z"
+                    d="M11.9984 3L11.8811 3.38729V14.6256L11.9984 14.7393L17.3652 11.6557L11.9984 3Z"
                     fill="#343434"
                 ></path>
                 <path

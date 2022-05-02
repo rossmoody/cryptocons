@@ -4,7 +4,7 @@
         fill="url(#PoloniexBadge_a)"
     />
     <path
-        d="M4.17188 6.6983H7.45163L11.2628 12.2851L9.42617 12.6935L7.89873 12.2851L4.17188 6.6983Z"
+        d="M4.17184 6.6983H7.4516L11.2628 12.2851L9.42614 12.6935L7.8987 12.2851L4.17184 6.6983Z"
         fill="url(#PoloniexBadge_b)"
     />
     <path
@@ -12,7 +12,7 @@
         fill="url(#PoloniexBadge_c)"
     />
     <path
-        d="M8.987 6.6983H12.2673L16.078 12.2851L14.2758 12.7163L12.7101 12.2851L8.987 6.6983Z"
+        d="M8.98703 6.6983H12.2673L16.078 12.2851L14.2758 12.7163L12.7102 12.2851L8.98703 6.6983Z"
         fill="url(#PoloniexBadge_d)"
     />
     <path
@@ -28,7 +28,7 @@
         fill="url(#PoloniexBadge_g)"
     />
     <path
-        d="M13.554 17.8715H15.1997L14.3867 16.7148L13.554 17.8715Z"
+        d="M13.554 17.8715H15.1997L14.3866 16.7148L13.554 17.8715Z"
         fill="url(#PoloniexBadge_h)"
     />
     <path
@@ -49,9 +49,9 @@
         </linearGradient>
         <linearGradient
             id="PoloniexBadge_b"
-            x1="5.19287"
+            x1="5.19284"
             y1="5.93814"
-            x2="8.41798"
+            x2="8.41795"
             y2="12.0082"
             gradientUnits="userSpaceOnUse"
         >
@@ -71,7 +71,7 @@
         </linearGradient>
         <linearGradient
             id="PoloniexBadge_d"
-            x1="9.98784"
+            x1="9.98787"
             y1="6.16186"
             x2="12.9943"
             y2="11.7989"
@@ -82,9 +82,9 @@
         </linearGradient>
         <linearGradient
             id="PoloniexBadge_e"
-            x1="16.2088"
+            x1="16.2087"
             y1="10.4835"
-            x2="16.2088"
+            x2="16.2087"
             y2="6.10272"
             gradientUnits="userSpaceOnUse"
         >
@@ -93,9 +93,9 @@
         </linearGradient>
         <linearGradient
             id="PoloniexBadge_f"
-            x1="13.2016"
+            x1="13.2015"
             y1="6.10272"
-            x2="13.2016"
+            x2="13.2015"
             y2="7.016"
             gradientUnits="userSpaceOnUse"
         >

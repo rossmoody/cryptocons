@@ -10,11 +10,11 @@ export const Poloniex = createIcon({
                     fill="url(#Poloniex_b)"
                 ></path>
                 <path
-                    d="M4.49968 6.98105H7.64219L11.2939 12.3341L9.53411 12.7254L8.07058 12.3341L4.49968 6.98105Z"
+                    d="M4.49968 6.98105H7.6422L11.2939 12.3341L9.53411 12.7254L8.07058 12.3341L4.49968 6.98105Z"
                     fill="url(#Poloniex_c)"
                 ></path>
                 <path
-                    d="M4.33502 17.6867H7.47754L11.2939 12.3341H8.07057L4.33502 17.6867Z"
+                    d="M4.33503 17.6867H7.47754L11.2939 12.3341H8.07057L4.33503 17.6867Z"
                     fill="url(#Poloniex_d)"
                 ></path>
                 <path
@@ -56,7 +56,7 @@ export const Poloniex = createIcon({
                 </linearGradient>
                 <linearGradient
                     id="Poloniex_c"
-                    x1="5.47795"
+                    x1="5.47796"
                     y1="6.2527"
                     x2="8.56811"
                     y2="12.0688"
