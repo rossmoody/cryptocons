@@ -1,8 +1,10 @@
 {
     "name": "cryptocons",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Cryptocurrency logos as tidy, optimized SVG React components.",
     "keywords": [
+        "cryptocurrency logos",
+        "crypto icons",
         "react",
         "icon",
         "svg"

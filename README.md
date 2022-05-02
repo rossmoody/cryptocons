@@ -1,35 +1,81 @@
-# 👋 Cryptocons
+# Cryptocons
+
+> This package is being updated rapidly and rather recklessly at the moment. Feel free to install it but changes icons are being added rapidly.
 
 ## What is Cryptocons?
 
-Cryptocons is a collection of named icon modules and utility functions for your project making it easier to create and manage cryptocurreny logos and branding.
+Cryptocons is a collection of named icon modules and utility functions making it easier to manage cryptocurreny icons in your project.
 
-Each icon is designed on a 24x24 grid and available as two types.
+Each icon is placed on a 24x24 grid and available as two types:
 
-| Type  | Description                                                                                                      |
-| ----- | ---------------------------------------------------------------------------------------------------------------- |
-| Logo  | Plain logomark icons                                                                                             |
-| Badge | Logomark icons contained in a shape that can be configured with different border radiuses from square to circle. |
+1. **Logo**: Plain logomark icons
+2. **Badge**: Logomark icons contained in a shape that can be configured with different border radiuses from square to circle.
 
 ## Installation
 
 To install the package in your project run:
 
 ```bash
-$ yarn add cryptocons
+yarn add cryptocons
 
-# or
+or
 
-$ npm i cryptocons
+npm i cryptocons
 ```
 
 ---
 
 ## Usage
 
+Each icon is wrapped in a `forwardRef` that exposes the underlying SVG element. Any valid SVG property can be added to an icon.
+
 ### Basic usage
 
-TBD
+Once the package is installed, importing and using icons is a pretty simple process. Named Icon modules can be imported.
+
+```jsx
+import { Binance } from 'cryptocons'
+
+<Binance>
+```
+
+### Bundled Icon components
+
+Cryptocons exposes two specialty components that aggregate all available icons from a given type (either Badge or Logo).
+
+TODO: Write this
+
+### Changing icon size
+
+Aside from regular SVG properties, each icon has a limited set of component properties. One of them is `size`. The size property is equivalent to setting the height and width of the SVG. The following examples are all fuctionally the same.
+
+```jsx
+import { BinanceBadge } from 'cryptocons'
+
+<BinanceBadge size={32}>
+<BinanceBadge height={32} width={32}>
+<BinanceBadge size="32px">
+<BinanceBadge height="32px" width="32px">
+```
+
+### Changing Badge radius
+
+Another component property exclusive to Badge icon types is `badgeRadius`. Setting a `badgeRadius` will round the corners from a square to a circle depending on the number. Setting a badgeRadius on an icon that isn't a Badge will have no effect. The default radius is `12`.
+
+```jsx
+import { Binance, BinanceBadge } from 'cryptocons'
+
+// This will have no effect
+<Binance badgeRadius={12}>
+// This will result in a squircle
+<BinanceBadge size={8}>
+// This will result in a square
+<BinanceBadge size={0}>
+// This will result in a circle
+<BinanceBadge size={100}>
+// This is redundant as the default radius is 12
+<BinanceBadge size={12}>
+```
 
 ### Creating custom icons
 
@@ -38,7 +84,7 @@ Two methods for creating your icons:
 -   The `Icon` component
 -   The `createIcon` convenience function
 
-The Icon component renders an SVG element to create custom icons on the fly. The createIcon function is a convenience wrapper allowing you to achieve the same result with less effort. The default `viewBox` is `0 0 24 24` when using the createIcon function. The Icon component will need supplied a `viewBox`. Every example below creates the same icon.
+The Icon component renders an SVG element to create custom icons on the fly. The createIcon function is a convenience wrapper allowing you to achieve the same result with less effort. The default `viewBox` is `0 0 24 24` when using the `createIcon` function. The Icon component will need supplied a `viewBox`. Every example below creates the same icon.
 
 ```jsx
 import { Icon, createIcon } from 'cryptocons'
@@ -50,36 +96,45 @@ const CircleIcon = () => (
 )
 
 const CircleIcon = createIcon({
-    dPath: 'M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0',
-})
-
-const CircleIcon = createIcon({
     path: (
         <path d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" />
     ),
 })
 ```
 
-```jsx
-import { Icon } from 'cryptocons'
+## Develop locally
 
-const SquareIcon = () => (
-    <Icon fill="none" width="24" height="24">
-        <rect
-            x="4"
-            y="4"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinejoin="round"
-            strokeLinecap="round"
-        />
-    </Icon>
-)
+If you want to tinker or contribute to Cryptocons, you will need to build the repo locally.
+
+The content within the `scripts` directory is what automatically transforms XML into React components from within the `svg` directory. Most of the functions within are refactored and updated from the [svg2jsx](https://github.com/balajmarius/svg2jsx) library.
+
+### Build
+
+#### 1. Install the dependencies
+
+```bash
+yarn
 ```
+
+#### 2. Run the scripts
+
+```bash
+yarn build
+```
+
+This will use `ts-node` to run all the functions in the `scripts` directory. These scripts will optimize, transform, and reformat the content within the `svg` directory into React components in the `components` directory.
+
+#### 3. Run Storybook to view changes
+
+```bash
+yarn storybook
+```
+
+This will build the components within the `components` directory to `localhost:8000`. Any changes made to components will automatically rerender.
 
 ### Accessibility
 
-Paraphrasing from [CSS Tricks on accessible SVG implementation](https://css-tricks.com/accessible-svgs/) and [other references](https://css-tricks.com/accessible-svg-icons/), an icon can be implemented in 2 main ways.
+Implementing icons accessibly can be tricky. Paraphrasing from [CSS Tricks on accessible SVG implementation](https://css-tricks.com/accessible-svgs/) and [other references](https://css-tricks.com/accessible-svg-icons/), an icon can be implemented in 2 main ways.
 
 #### 1. Decorative
 
@@ -87,14 +142,14 @@ Cryptocon icons assume decorative intent. What this means is icons have `aria-hi
 
 ```jsx
 <button onClick={navigateHome}>
-    <Home />
+    <BinanceBadge />
     Navigate home
 </button>
 ```
 
 ```jsx
-<button aria-label="Navigate home">
-    <Home />
+<button aria-label="Do Binance action">
+    <BinanceBadge />
 </button>
 ```
 
@@ -102,14 +157,14 @@ When icons are wrapped by an interactive element, what’s important is that the
 
 ```jsx
 <a href="/" aria-label="Navigate home">
-    <Home />
+    <Coinbase />
 </a>
 ```
 
 ```jsx
 <a href="/">
     Navigate home
-    <Home />
+    <Coinbase />
 </a>
 ```
 
@@ -127,9 +182,3 @@ Suppose the icon is being used as a standalone interactive element and isn't acc
     aria-hidden={false}
 />
 ```
-
----
-
-## Building locally
-
-TBD
