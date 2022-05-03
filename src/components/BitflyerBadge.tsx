@@ -2,12 +2,9 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const BitflyerBadge = createIcon({
+    rectFill: '#3498D4',
     path: (
         <>
-            <path
-                d="M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z"
-                fill="#3498D4"
-            ></path>
             <path
                 d="M5.20001 5.19995H9.41899V9.41893H5.20001V5.19995Z"
                 fill="white"

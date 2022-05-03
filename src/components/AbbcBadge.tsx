@@ -2,12 +2,9 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const AbbcBadge = createIcon({
+    rectFill: '#FE9B00',
     path: (
         <>
-            <path
-                d="M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z"
-                fill="#FE9B00"
-            ></path>
             <path
                 d="M22.9999 12.0019C23.0074 18.0206 18.1294 23 12.0018 23C5.87424 23 0.996189 18.0169 0.999941 11.9944C1.00369 5.97186 5.87424 1 12.0056 1C18.1369 1 23.0112 5.98687 22.9999 12.0019Z"
                 fill="#FE9B00"

@@ -1,8 +1,5 @@
 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-        d="M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z"
-        fill="#BABDE6"
-    />
+    <rect width="24" height="24" fill="#BABDE6" />
     <path
         d="M7.30144 5.68256L19.7306 14.1691L16.6567 18.7131L4.22757 10.1597L7.30144 5.68256Z"
         fill="url(#SushiSwapBadge_a)"

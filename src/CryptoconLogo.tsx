@@ -4,18 +4,18 @@ import { IconProps } from './Icon'
 import { LogoNames } from './types'
 
 export interface CryptoconLogoProps extends Omit<IconProps, 'badgeRadius'> {
-  icon: LogoNames
+    icon: LogoNames
 }
 
 /**
  * A utility component for rendering logo cryptocons with intellisense through the icon property.
  */
 export const CryptoconLogo = forwardRef<SVGSVGElement, CryptoconLogoProps>(
-  (props, ref) => {
-    const { icon = 'BinanceBadge', ...rest } = props
+    (props, ref) => {
+        const { icon = 'BinanceBadge', ...rest } = props
 
-    const Icon = icons[icon]
+        const Icon = icons[icon]
 
-    return <Icon {...rest} ref={ref} />
-  }
+        return <Icon {...rest} ref={ref} />
+    }
 )

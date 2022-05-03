@@ -2,12 +2,9 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const CoinDeskBadge = createIcon({
+    rectFill: '#F8BF1E',
     path: (
         <>
-            <path
-                d="M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z"
-                fill="#F8BF1E"
-            ></path>
             <path
                 d="M11.9987 12.6244C12.353 12.6244 12.6401 12.3382 12.6401 11.9852C12.6401 11.6322 12.353 11.3461 11.9987 11.3461C11.6445 11.3461 11.3573 11.6322 11.3573 11.9852C11.3573 12.3382 11.6445 12.6244 11.9987 12.6244Z"
                 fill="white"

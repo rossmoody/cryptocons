@@ -2,12 +2,9 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const TruffleBadge = createIcon({
+    rectFill: 'white',
     path: (
         <>
-            <path
-                d="M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z"
-                fill="white"
-            ></path>
             <path
                 d="M12.1036 20.7659C16.889 20.7659 20.7683 16.8413 20.7683 12C20.7683 7.15871 16.889 3.23407 12.1036 3.23407C7.31828 3.23407 3.43898 7.15871 3.43898 12C3.43898 16.8413 7.31828 20.7659 12.1036 20.7659Z"
                 fill="#5E464D"

@@ -2,12 +2,9 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const PoloniexBadge = createIcon({
+    rectFill: 'url(#PoloniexBadge_a)',
     path: (
         <>
-            <path
-                d="M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z"
-                fill="url(#PoloniexBadge_a)"
-            ></path>
             <path
                 d="M4.17184 6.6983H7.4516L11.2628 12.2851L9.42614 12.6935L7.8987 12.2851L4.17184 6.6983Z"
                 fill="url(#PoloniexBadge_b)"

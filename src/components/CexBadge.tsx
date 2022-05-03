@@ -2,12 +2,9 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const CexBadge = createIcon({
+    rectFill: 'white',
     path: (
         <>
-            <path
-                d="M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z"
-                fill="white"
-            ></path>
             <g clipPath="url(#CexBadge_a)">
                 <path
                     d="M3.98105 8.90833C3.96845 8.9402 3.95659 8.97207 3.94473 9.00468L3.96178 8.99653L3.98105 8.90833Z"

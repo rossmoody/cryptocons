@@ -2,6 +2,7 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const BlackmoonBadge = createIcon({
+    rectFill: 'black',
     path: (
         <>
             <path

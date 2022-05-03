@@ -2,12 +2,9 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const BithumbBadge = createIcon({
+    rectFill: 'white',
     path: (
         <>
-            <path
-                d="M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z"
-                fill="white"
-            ></path>
             <path
                 d="M7.05948 7.71057H9.31506L7.56127 12.0419C7.56127 12.0419 6.64447 12.0268 6.36414 11.218C6.28562 10.9778 6.27903 10.7195 6.34519 10.4756L7.05948 7.71057Z"
                 fill="#D53127"

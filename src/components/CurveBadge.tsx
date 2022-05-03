@@ -2,12 +2,9 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const CurveBadge = createIcon({
+    rectFill: 'white',
     path: (
         <>
-            <path
-                d="M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z"
-                fill="white"
-            ></path>
             <path
                 d="M10.8053 13.7042L9.58551 13.9723L9.43497 13.4055L10.732 13.1719L10.8053 13.7042Z"
                 fill="#0000FF"

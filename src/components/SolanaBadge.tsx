@@ -2,12 +2,9 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const SolanaBadge = createIcon({
+    rectFill: '#1A1A1A',
     path: (
         <>
-            <path
-                d="M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z"
-                fill="#1A1A1A"
-            ></path>
             <path
                 d="M6.60022 15.1606C6.69813 15.0669 6.83086 15.0144 6.96926 15.0144H19.7384C19.971 15.0144 20.0875 15.2836 19.9229 15.4409L17.3998 17.8538C17.3019 17.9474 17.1692 18 17.0308 18H4.26156C4.02896 18 3.91251 17.7308 4.07704 17.5734L6.60022 15.1606Z"
                 fill="url(#SolanaBadge_a)"

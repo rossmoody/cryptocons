@@ -2,12 +2,9 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const DogecoinBadge = createIcon({
+    rectFill: '#BA9F33',
     path: (
         <>
-            <path
-                d="M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z"
-                fill="#BA9F33"
-            ></path>
             <path
                 d="M12.0001 20.5999C16.9706 20.5999 21 16.5706 21 11.6001C21 6.62959 16.9706 2.60022 12.0001 2.60022C7.02966 2.60022 3.00029 6.62959 3.00029 11.6001C3.00029 16.5706 7.02966 20.5999 12.0001 20.5999Z"
                 fill="#BA9F33"

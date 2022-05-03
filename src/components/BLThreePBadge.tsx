@@ -2,12 +2,9 @@ import React from 'react'
 import { createIcon } from '../createIcon'
 
 export const BLThreePBadge = createIcon({
+    rectFill: '#29A844',
     path: (
         <>
-            <path
-                d="M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z"
-                fill="#29A844"
-            ></path>
             <path
                 d="M10.2627 12L12.7497 7.67615H7.77711L6.05191 4.67505H17.9253L11.9869 14.9987L10.2627 12Z"
                 fill="#E6362D"

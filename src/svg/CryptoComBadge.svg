@@ -1,8 +1,5 @@
 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path
-        d="M0 8C0 3.58172 3.58172 0 8 0H16C20.4183 0 24 3.58172 24 8V16C24 20.4183 20.4183 24 16 24H8C3.58172 24 0 20.4183 0 16V8Z"
-        fill="white"
-    />
+    <rect width="24" height="24" fill="white" />
     <path
         d="M11.9623 2.72095L3.92456 7.36046V16.6395L11.9623 21.279L20 16.6395V7.36046L11.9623 2.72095Z"
         fill="url(#CryptoComBadge_a)"

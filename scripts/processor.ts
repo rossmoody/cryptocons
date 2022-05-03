@@ -19,7 +19,7 @@ export function process(node: ElementNode, fileName: string) {
                 fileName.includes('Badge') &&
                 index === 0 &&
                 childClone.tagName === 'rect' &&
-                childClone.properties!.fill
+                childClone.properties?.fill
 
             if (isValidBackgroundShapeElement) {
                 nodeClone.rectFill = String(childClone.properties!.fill)
