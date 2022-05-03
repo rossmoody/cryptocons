@@ -1,7 +1,5 @@
 # Cryptocons
 
-> This package is being updated rapidly and rather recklessly at the moment. Feel free to install it but new icons are being added rapidly and some module names are being changed on the fly.
-
 ## What is Cryptocons?
 
 Cryptocons is a collection of named icon modules and utility functions making it easier to manage cryptocurreny icons in your project.

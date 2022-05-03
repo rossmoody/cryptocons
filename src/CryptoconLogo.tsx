@@ -7,9 +7,6 @@ export interface CryptoconLogoProps extends Omit<IconProps, 'badgeRadius'> {
     icon: LogoNames
 }
 
-/**
- * A utility component for rendering logo cryptocons with intellisense through the icon property.
- */
 export const CryptoconLogo = forwardRef<SVGSVGElement, CryptoconLogoProps>(
     (props, ref) => {
         const { icon = 'BinanceBadge', ...rest } = props
