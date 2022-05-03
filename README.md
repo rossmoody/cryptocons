@@ -11,9 +11,13 @@ Each icon is placed on a 24x24 grid and available as two types:
 1. **Logo**: Plain logomark icons
 2. **Badge**: Logomark icons contained in a shape that can be configured with different border radiuses from square to circle.
 
-## Installation
+---
 
-To install the package in your project run:
+## Quick start
+
+For a detailed guide on Cryptocon component usage, [check out the website](https://www.cryptocons.io/how-to-use). To get started quickly and/or learn by inspecting, read on and check out the [CodeSandbox example](#).
+
+### 1. Install the package in your project
 
 ```bash
 yarn add cryptocons
@@ -23,86 +27,20 @@ or
 npm install cryptocons
 ```
 
----
-
-## Usage
-
-Each icon is wrapped in a `forwardRef` that exposes the underlying SVG element. Any property that can be added to a regular SVG can be added to a cryptocon.
-
-### Basic usage
-
-Once the package is installed, importing and using cryptocons is a pretty simple process. Named Icon modules can be imported like so:
-
-```jsx
-import { Binance } from 'cryptocons'
-
-<Binance>
-```
-
-### Bundled Icon components
-
-The Cryptocon library exposes two specialty components that aggregate all available icons from a given type (either Badge or Logo).
-
-TODO: Write this
-
-### Changing icon size
-
-Aside from regular SVG properties, each icon has a limited set of component properties. One of them is `size`. The `size` property is equivalent to setting the height and width of the SVG. The following examples are all fuctionally the same.
-
-```jsx
-import { BinanceBadge } from 'cryptocons'
-
-<BinanceBadge size={32}>
-<BinanceBadge height={32} width={32}>
-<BinanceBadge size="32px">
-<BinanceBadge height="32px" width="32px">
-```
-
-### Changing Badge radius
-
-Another component property exclusive to Badge icon types is `badgeRadius`. Setting a `badgeRadius` will round the corners from a square to a circle depending on the number. Setting a badgeRadius on an icon that isn't a Badge will have no effect. The default radius is `12`.
+### 2. Import icons
 
 ```jsx
 import { Binance, BinanceBadge } from 'cryptocons'
-
-// This will have no effect
-<Binance badgeRadius={12}>
-// This will result in a squircle
-<BinanceBadge size={8}>
-// This will result in a square
-<BinanceBadge size={0}>
-// This will result in a circle
-<BinanceBadge size={100}>
-// This is redundant as the default radius is 12
-<BinanceBadge size={12}>
 ```
 
-### Creating custom icons
-
-Two methods for creating your own cryptocons:
-
--   The `Icon` component
--   The `createIcon` convenience function
-
-The Icon component renders an SVG element to create custom cryptocons on the fly. The `createIcon` function is a convenience wrapper allowing you to achieve the same result with less effort.
-
-The default `viewBox` is `0 0 24 24` when using the `createIcon` function. The Icon component will need supplied a `viewBox`. Every example below creates the same icon.
+### 3. Render the icons
 
 ```jsx
-import { Icon, createIcon } from 'cryptocons'
-
-const ExampleIcon = () => (
-    <Icon viewBox="0 0 24 24">
-        <path d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" />
-    </Icon>
-)
-
-const ExampleIcon = createIcon({
-    path: (
-        <path d="M 100, 100 m -75, 0 a 75,75 0 1,0 150,0 a 75,75 0 1,0 -150,0" />
-    ),
-})
+<Binance />
+<BinanceBadge />
 ```
+
+---
 
 ## Develop locally
 
