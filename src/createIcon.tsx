@@ -19,7 +19,7 @@ export function createIcon(options: CreateIconOptions) {
     const { path, rectFill } = options
 
     return React.forwardRef<SVGSVGElement, IconProps>((props, ref) => {
-        const { badgeRadius = 12, ...rest } = props
+        const { badgeRadius = 8, ...rest } = props
 
         return (
             <Icon {...rest} ref={ref}>

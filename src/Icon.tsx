@@ -9,7 +9,7 @@ export interface IconProps extends React.SVGAttributes<SVGElement> {
     size?: string | number
     /**
      * Sets the radius of the background shape in Badge icons.
-     * Has no effect on logo icons. Defaults to 12.
+     * Has no effect on logo icons. Defaults to 8.
      */
     badgeRadius?: number
 }
