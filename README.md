@@ -13,7 +13,7 @@ Each icon is placed on a 24x24 grid and available as two types:
 
 ## Quick start
 
-For a detailed guide on Cryptocon component usage, [check out the website](https://www.cryptocons.io/how-to-use). To get started quickly and/or learn by inspecting, read on and check out the [CodeSandbox example](#).
+For a detailed guide on Cryptocon component usage, [check out the website](https://www.cryptocons.io/how-to-use). To get started quickly and/or learn by inspecting, read on and check out the [CodeSandbox example](https://codesandbox.io/s/cryptocons-example-okpxc2?file=/src/App.tsx).
 
 ### 1. Install the package in your project
 
