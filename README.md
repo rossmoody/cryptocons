@@ -70,53 +70,6 @@ yarn storybook
 
 This will build the components within the `components` directory to `localhost:8000`. Any changes made to components will automatically rerender. Hack away.
 
-### Accessibility
+## Contributing 
 
-Implementing icons accessibly can be tricky but it's important. Especially if you plan on putting 400+ cryptocurrency icons on a page. Paraphrasing from [CSS Tricks on accessible SVG implementation](https://css-tricks.com/accessible-svgs/) and [other references](https://css-tricks.com/accessible-svg-icons/), an icon can be implemented in 2 main ways.
-
-#### 1. Decorative
-
-Cryptocon icons assume decorative intent. What this means is icons have `aria-hidden="true"` and `focusable="false"` set by default. It's favorable to let assistive technology instead of the icon recognize parent elements. SVG elements with an `aria-label` are more verbose because they are announced as a group, so it's favorable to go with `aria-label` on the primary interactive parent element.
-
-```jsx
-<button onClick={navigateHome}>
-    <BinanceBadge />
-    Navigate home
-</button>
-```
-
-```jsx
-<button aria-label="Do Binance action">
-    <BinanceBadge />
-</button>
-```
-
-When icons are wrapped by an interactive element, what’s important is that the link has informative text. Therefore, if a component can be described by visible text, it is recommended to reference that text with an `aria-label` attribute rather than using the `title` property.
-
-```jsx
-<a href="/" aria-label="Navigate home">
-    <Coinbase />
-</a>
-```
-
-```jsx
-<a href="/">
-    Navigate home
-    <Coinbase />
-</a>
-```
-
-#### 2. Standalone
-
-> This implementation is discouraged. It's best to use an IconButton instead as it contains accessible interaction states. But if you're gonna do it, do it in the following way.
-
-Suppose the icon is being used as a standalone interactive element and isn't accompanied by a visible text label. In that case, it's best to use a combination of `role`, `aria-label`, and ensuring the icon can be discovered by assistive technology by setting `aria-hidden` to `false`.
-
-```jsx
-<Home
-    onClick={navigateHome}
-    role="img"
-    aria-label="Navigate home"
-    aria-hidden={false}
-/>
-```
+Coming soon...
