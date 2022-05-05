@@ -2,7 +2,7 @@
 
 ## What is Cryptocons?
 
-Cryptocons is a collection of named icon modules and utility functions making it easier to manage cryptocurreny icons in your project.
+Cryptocons is a collection of named icon modules and utility functions making it easier to manage cryptocurrency icons in your project.
 
 Each icon is placed on a 24x24 grid and available as two types:
 
