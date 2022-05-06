@@ -1,5 +1,7 @@
 # Cryptocons
 
+![Cryptocons cover](cover.png)
+
 ## What is Cryptocons?
 
 Cryptocons is a collection of named icon modules and utility functions making it easier to manage cryptocurrency icons in your project.
@@ -8,6 +10,10 @@ Each icon is placed on a 24x24 grid and available as two types:
 
 1. **Logo**: Plain logomark icons
 2. **Badge**: Logomark icons contained in a shape that can be configured with different border radiuses from square to circle.
+
+## Design Assets
+
+Check out the [Figma library](https://www.figma.com/community/file/1100964857221715143/Cryptocurrency-Logos-and-Icons) for component assets.
 
 ---
 
@@ -70,6 +76,6 @@ yarn storybook
 
 This will build the components within the `components` directory to `localhost:8000`. Any changes made to components will automatically rerender. Hack away.
 
-## Contributing 
+## Contributing
 
 Coming soon...
