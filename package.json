@@ -21,6 +21,7 @@
     "scripts": {
         "rollup": "rollup -c",
         "build": "ts-node scripts/builder",
+        "test": "",
         "storybook": "start-storybook -p 6006"
     },
     "repository": {
