@@ -8,10 +8,10 @@ export function typify(filenames: string[]) {
     filenames.forEach((iconName) => {
         switch (iconName.includes('Badge')) {
             case true:
-                badges.push(iconName)
+                badges.push(`'${iconName}'`)
 
             case false:
-                logos.push(iconName)
+                logos.push(`'${iconName}'`)
         }
     })
 

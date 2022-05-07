@@ -7,7 +7,7 @@ interface BadgeNode extends ElementNode {
 /**
  * Process badge icon background shape fill and omit it from node
  */
-export function process(node: ElementNode, fileName: string) {
+export function badger(node: ElementNode, fileName: string) {
     const nodeClone: BadgeNode = { ...node }
     const svgChildren = node.children as ElementNode[]
 

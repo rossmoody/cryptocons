@@ -1,12 +1,12 @@
 import fs from 'fs/promises'
 import path from 'path'
 import {
+    badger,
     clean,
     componentize,
     consolify,
     parse,
     pretty,
-    process,
     sort,
     stringify,
     tagify,
@@ -42,7 +42,7 @@ const typeFilePath = path.join(__dirname, '../src/types.ts')
             const cleaned = clean(svg, componentName)
             const parsed = parse(cleaned)
             const transformed = transform(parsed)
-            const processed = process(transformed, componentName)
+            const processed = badger(transformed, componentName)
             const stringified = stringify(processed)
             const componentized = componentize(
                 stringified,
