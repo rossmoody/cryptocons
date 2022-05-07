@@ -75,7 +75,3 @@ yarn storybook
 ```
 
 This will build the components within the `components` directory to `localhost:8000`. Any changes made to components will automatically rerender. Hack away.
-
-## Contributing
-
-Coming soon...

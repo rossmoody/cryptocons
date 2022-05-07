@@ -1,27 +1,23 @@
-interface IconNames {
-  badge: string[]
-  logo: string[]
-}
-
 /**
- * Creates type definitions for icon names used in Logo and Badge components.
+ * Creates type definitions for icon names used in Logo and Badge components
  */
 export function typify(filenames: string[]) {
-  const sortedNames = filenames.reduce(
-    (accumulator, iconName) => {
-      const iconType = iconName.includes('Badge') ? 'badge' : 'logo'
-      accumulator[iconType].push(`'${iconName}'`)
-      return accumulator
-    },
-    { badge: [], logo: [] } as IconNames
-  )
+    const badges = [] as string[]
+    const logos = [] as string[]
 
-  const logoNames = sortedNames.logo.join(' | ')
-  const badgeNames = sortedNames.badge.join(' | ')
+    filenames.forEach((iconName) => {
+        switch (iconName.includes('Badge')) {
+            case true:
+                badges.push(iconName)
 
-  return `
-      export type LogoNames = ${logoNames}
+            case false:
+                logos.push(iconName)
+        }
+    })
 
-      export type BadgeNames = ${badgeNames}
+    return `
+      export type LogoNames = ${logos.sort().join(' | ')}
+
+      export type BadgeNames = ${badges.sort().join(' | ')}
       `
 }

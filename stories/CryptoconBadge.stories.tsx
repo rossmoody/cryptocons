@@ -7,9 +7,6 @@ export default {
     component: CryptoconBadge,
 } as ComponentMeta<typeof CryptoconBadge>
 
-/**
- * Utility component for rendering badge cryptocons with intellisense through the icon property.
- */
 export const CryptoconBadgeComponent: ComponentStory<typeof CryptoconBadge> = (
     args
 ) => <CryptoconBadge {...args} />
