@@ -50,7 +50,7 @@ import { Binance, BinanceBadge } from 'cryptocons'
 
 If you want to tinker or contribute to Cryptocons, you will need to build the repo locally.
 
-The content within the `scripts` directory is what automatically transforms XML into React components from within the `svg` directory. Most of the functions within are refactored and updated from the [svg2jsx](https://github.com/balajmarius/svg2jsx) library.
+The content within the `scripts` directory is what automatically transforms XML into React components from within the `svg` directory. Most of the functions within are refactored and tailored to the cryptocon build process from the [svg2jsx](https://github.com/balajmarius/svg2jsx) library.
 
 ### Build
 
@@ -75,3 +75,7 @@ yarn storybook
 ```
 
 This will build the components within the `components` directory to `localhost:8000`. Any changes made to components will automatically rerender. Hack away.
+
+### Debug
+
+If you use VS Code to develop, the debug panel will have a pre-configured profile called "Debug Scripts". This will run the build command in debug mode and allow you to step through all the functions.
