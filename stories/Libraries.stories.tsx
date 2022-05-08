@@ -28,13 +28,7 @@ const Template: Story<IconProps> = (args, { parameters }) => (
                 }
             })
             .map(([displayName, Icon]) => {
-                return (
-                    <Icon
-                        {...args}
-                        key={displayName}
-                        data-test-id="cryptocon"
-                    />
-                )
+                return <Icon {...args} key={displayName} />
             })}
     </React.Fragment>
 )
