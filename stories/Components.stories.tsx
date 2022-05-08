@@ -10,23 +10,14 @@ export const Badge: ComponentStory<typeof CryptoconBadge> = (args) => (
     <CryptoconBadge {...args} />
 )
 
-Badge.args = {
-    icon: 'BinanceBadge',
-    size: 48,
-    badgeRadius: 12,
-}
-
 export const Logo: ComponentStory<typeof CryptoconLogo> = (args) => (
     <CryptoconLogo {...args} />
 )
-
-Logo.args = {
-    icon: 'Binance',
-    size: 48,
-}
 
 export const CryptoconComponent: ComponentStory<typeof Cryptocon> = (args) => (
     <Cryptocon {...args} />
 )
 
+Badge.args = { icon: 'BinanceBadge', size: 48, badgeRadius: 12 }
+Logo.args = { icon: 'Binance', size: 48 }
 CryptoconComponent.args = { icon: 'Binance', size: 48, badgeRadius: 12 }
