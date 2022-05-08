@@ -1,6 +1,6 @@
 # Cryptocons
 
-![Cryptocons cover](cover.png)
+![Cryptocons cover](.github/cover.png)
 
 ## What is Cryptocons?
 
