@@ -82,8 +82,30 @@ If you use VS Code to develop, the debug panel will have a pre-configured profil
 
 ## Test
 
-Icon tests are run with React Testing Library and Jest. The below command will run all available tests within the `__tests__` directory inside `src` and watch for changes.
+Icon tests are run with React Testing Library and Jest.
 
 ```bash
 yarn test
 ```
+
+This will run all available tests within the `tests` directory inside `src` and watch for changes.
+
+## Contributing
+
+If you would like to contribute, the repository is setup in a way to make it fairly easy, but there are a few important things to know.
+
+The entire component library is built from how the content within the `svgs` repository is named and structured. This means naming conventions play a very important role and the exporting svgs as Badges and Logos.
+
+### Naming conventions
+
+1. Icons are named after the brand/business/coin name, not the cryptocurrency ticker symbol. For example, Bitcoin's ticker symbol is BTC and Ethereum's ticker symbol is ETH. The name of the icon would be `Ethereum`, `EthereumBadge`, `Bitcoin`, `BitcoinBadge`.
+2. Icons have two types: Badge and Logo. Logos are the default icon and don't need typed. Badge types of an icon must have the word "Badge" as a suffix.
+3. Icon names are PascalCase with no spaces. PascalCaseIsCapitalizedInsteadOfASpace.
+4. Numbers in names are always typed out. For instance, it's `ZeroX` instead of `0x` (sorry 0x, blame JavaScript).
+
+### Exporting SVGs
+
+The build process within `scripts` has a few important hooks.
+
+1. Icons must be on a 24x24 pixel artboard/canvas. The `viewBox` used in the `createIcon` helper specifies 24x24 and it's important to match it.
+2. For Badge types, the first element in the exported svg must be a 24x24 `rect` element with a color. This is hooked into during the build process and creates the `badgeRadius` functionality. Follow the icon structure in [the example Figma](#) file.
