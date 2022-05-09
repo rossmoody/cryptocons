@@ -5,7 +5,7 @@ on:
         types: [published]
 
 jobs:
-    build:
+    test:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
@@ -14,6 +14,17 @@ jobs:
                   node-version: 16
             - run: yarn
             - run: yarn test
+
+    build:
+        needs: test
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 16
+            - run: yarn build
+            - run: yarn rollup
 
     publish-npm:
         needs: build
@@ -24,7 +35,6 @@ jobs:
               with:
                   node-version: 16
                   registry-url: https://registry.npmjs.org/
-            - run: yarn
             - run: npm publish
               env:
                   NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
