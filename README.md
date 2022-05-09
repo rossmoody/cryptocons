@@ -94,7 +94,12 @@ This will run all available tests within the `tests` directory inside `src` and 
 
 If you would like to contribute, the repository is setup in a way to make it fairly easy, but there are a few important things to know.
 
-The entire component library is built from how the content within the `svgs` repository is named and structured. This means naming conventions play a very important role and the exporting svgs as Badges and Logos.
+The entire component library is built from how the content within the `svgs` repository is named and structured. This means naming conventions play a very important role and there area few important hooks when exporting svgs as Badges and Logos.
+
+### Exporting SVGs
+
+1. Icons must be on a 24x24 pixel artboard/canvas. The `viewBox` used in the `createIcon` helper specifies 24x24 and it's important to match it.
+2. For Badge types, the first element in the exported svg must be a 24x24 `rect` element with a color. This is hooked into during the build process and creates the `badgeRadius` functionality. Follow the icon structure in [the example Figma](#) file.
 
 ### Naming conventions
 
@@ -102,10 +107,3 @@ The entire component library is built from how the content within the `svgs` rep
 2. Icons have two types: Badge and Logo. Logos are the default icon and don't need typed. Badge types of an icon must have the word "Badge" as a suffix.
 3. Icon names are PascalCase with no spaces. PascalCaseIsCapitalizedInsteadOfASpace.
 4. Numbers in names are always typed out. For instance, it's `ZeroX` instead of `0x` (sorry 0x, blame JavaScript).
-
-### Exporting SVGs
-
-The build process within `scripts` has a few important hooks.
-
-1. Icons must be on a 24x24 pixel artboard/canvas. The `viewBox` used in the `createIcon` helper specifies 24x24 and it's important to match it.
-2. For Badge types, the first element in the exported svg must be a 24x24 `rect` element with a color. This is hooked into during the build process and creates the `badgeRadius` functionality. Follow the icon structure in [the example Figma](#) file.

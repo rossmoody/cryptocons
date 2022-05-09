@@ -1,7 +1,7 @@
 import { Meta, Story } from '@storybook/react'
 import React from 'react'
-import { Icon, IconProps } from '../src'
-import * as icons from '../src/components'
+import { Icon, IconProps } from '..'
+import * as icons from '../components'
 
 export default {
     title: 'Libraries',
