@@ -1,14 +1,11 @@
 import { ElementNode } from 'svg-parser'
 
-interface BadgeNode extends ElementNode {
-    rectFill?: string
-}
-
 /**
  * Process badge icon background shape fill and omit it from node
  */
 export function badger(node: ElementNode, fileName: string) {
-    const nodeClone: BadgeNode = { ...node }
+    let rectFill = ''
+    const nodeClone = { ...node }
     const svgChildren = node.children as ElementNode[]
 
     const children = svgChildren.reduce(
@@ -22,8 +19,8 @@ export function badger(node: ElementNode, fileName: string) {
                 childClone.properties?.fill
 
             if (isValidBackgroundShapeElement) {
-                nodeClone.rectFill = String(childClone.properties!.fill)
-                return [...accumulator]
+                rectFill = String(childClone.properties!.fill)
+                return [...accumulator] // Intentionally return without child
             }
 
             return [...accumulator, childClone]
@@ -32,7 +29,10 @@ export function badger(node: ElementNode, fileName: string) {
     )
 
     return {
-        ...nodeClone,
-        children,
-    } as BadgeNode
+        rectFill,
+        element: {
+            ...nodeClone,
+            children,
+        },
+    }
 }

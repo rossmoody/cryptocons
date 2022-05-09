@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import React from 'react'
-import { Cryptocon, CryptoconBadge, CryptoconLogo } from '../src'
+import { Cryptocon, CryptoconBadge, CryptoconLogo } from '..'
 
 export default {
     title: 'Components',
@@ -14,10 +14,10 @@ export const Logo: ComponentStory<typeof CryptoconLogo> = (args) => (
     <CryptoconLogo {...args} />
 )
 
-export const CryptoconComponent: ComponentStory<typeof Cryptocon> = (args) => (
+export const Cryptocons: ComponentStory<typeof Cryptocon> = (args) => (
     <Cryptocon {...args} />
 )
 
 Badge.args = { icon: 'BinanceBadge', size: 48, badgeRadius: 12 }
 Logo.args = { icon: 'Binance', size: 48 }
-CryptoconComponent.args = { icon: 'Binance', size: 48, badgeRadius: 12 }
+Cryptocons.args = { icon: 'Binance', size: 48, badgeRadius: 12 }

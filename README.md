@@ -79,3 +79,11 @@ This will build the components within the `components` directory to `localhost:8
 ### Debug
 
 If you use VS Code to develop, the debug panel will have a pre-configured profile called "Debug Scripts". This will run the build command in debug mode and allow you to step through all the functions.
+
+### Test
+
+Icon tests are run with React Testing Library and Jest. The below command will run all available tests within the `__tests__` directory inside `src` and watch for changes.
+
+```bash
+yarn test
+```

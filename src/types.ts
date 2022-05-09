@@ -4,7 +4,9 @@ export type LogoNames =
     | 'AcalaNetwork'
     | 'AcalaNetworkBadge'
     | 'Achain'
+    | 'AchainBadge'
     | 'Adcoin'
+    | 'AdcoinBadge'
     | 'AidosKuneen'
     | 'AidosKuneenBadge'
     | 'Aion'
@@ -275,6 +277,8 @@ export type LogoNames =
 export type BadgeNames =
     | 'AbbcBadge'
     | 'AcalaNetworkBadge'
+    | 'AchainBadge'
+    | 'AdcoinBadge'
     | 'AidosKuneenBadge'
     | 'AionBadge'
     | 'AlgorandBadge'
@@ -408,3 +412,5 @@ export type BadgeNames =
     | 'ZeroCollateralDaiBadge'
     | 'ZeroXBadge'
     | 'ZilliqaBadge'
+
+export type CryptoconNames = LogoNames | BadgeNames

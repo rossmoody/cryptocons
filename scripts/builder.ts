@@ -43,7 +43,7 @@ const typeFilePath = path.join(__dirname, '../src/types.ts')
             const parsed = parse(cleaned)
             const transformed = transform(parsed)
             const processed = badger(transformed, componentName)
-            const stringified = stringify(processed)
+            const stringified = stringify(processed.element)
             const componentized = componentize(
                 stringified,
                 componentName,

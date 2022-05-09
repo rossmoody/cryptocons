@@ -19,5 +19,7 @@ export function typify(filenames: string[]) {
       export type LogoNames = ${logos.sort().join(' | ')}
 
       export type BadgeNames = ${badges.sort().join(' | ')}
+
+      export type CryptoconNames = LogoNames | BadgeNames
       `
 }
