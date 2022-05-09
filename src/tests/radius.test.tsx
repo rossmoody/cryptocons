@@ -10,7 +10,7 @@ describe('Badge icons', () => {
 
         cryptocons.forEach((cryptocon) => {
             try {
-                expect(cryptocon.firstElementChild).toHaveAttribute('rx')
+                expect(cryptocon.firstElementChild).toHaveAttribute('rx', '8')
             } catch (error) {
                 const name =
                     cryptocon.getAttribute('data-test-name') ??
@@ -25,9 +25,7 @@ describe('Badge icons', () => {
         rerender(<CryptoconBadgeLibrary badgeRadius={40} />)
 
         cryptocons.forEach((cryptocon) => {
-            expect(cryptocon.firstElementChild?.getAttribute('rx')).toEqual(
-                '40'
-            )
+            expect(cryptocon.firstElementChild).toHaveAttribute('rx', '40')
         })
     })
 })

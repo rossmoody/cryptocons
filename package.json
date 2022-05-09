@@ -18,6 +18,10 @@
     "main": "dist/cjs/index.js",
     "module": "dist/esm/index.js",
     "types": "dist/index.d.ts",
+    "engines": {
+        "npm": ">=7.0.0",
+        "node": ">=16.0.0"
+    },
     "scripts": {
         "rollup": "rollup -c",
         "build": "ts-node scripts/builder",
