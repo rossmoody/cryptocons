@@ -27,7 +27,7 @@
         "build": "ts-node scripts/builder",
         "test": "react-scripts test",
         "storybook": "start-storybook -p 6006",
-        "npm:publish": "yarn build && yarn rollup && npm publish"
+        "pre-publish": "yarn build && yarn rollup"
     },
     "repository": {
         "type": "git",
