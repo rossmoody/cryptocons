@@ -107,3 +107,9 @@ The entire component library is built from how the content within the `svgs` rep
 2. Icons have two types: Badge and Logo. Logos are the default icon and don't need typed. Badge types of an icon must have the word "Badge" as a suffix.
 3. Icon names are PascalCase with no spaces. PascalCaseIsCapitalizedInsteadOfASpace.
 4. Numbers in names are always typed out. For instance, it's `ZeroX` instead of `0x` (sorry 0x, blame JavaScript).
+
+---
+
+## More apps by me
+
+I like making things. [Check out what I'm up to lately](https://rossmoody.com).
