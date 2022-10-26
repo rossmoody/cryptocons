@@ -16,7 +16,6 @@ import {
 const svgDirPath = path.join(__dirname, '../src/svg')
 const componentDirPath = path.join(__dirname, '../src/components')
 const exportFilePath = path.join(componentDirPath, '/index.ts')
-const metaFilePath = path.join(__dirname, '../src/metadata.json')
 const typeFilePath = path.join(__dirname, '../src/types.ts')
 
 ;(async () => {

@@ -13,7 +13,7 @@ export default {
 } as Meta
 
 const Template: Story<IconProps> = (args, { parameters }) => (
-    <React.Fragment>
+    <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap' }}>
         {Object.entries(icons)
             .filter(([displayName]) => {
                 switch (parameters.fileName) {
@@ -30,7 +30,7 @@ const Template: Story<IconProps> = (args, { parameters }) => (
             .map(([displayName, Icon]) => {
                 return <Icon {...args} key={displayName} />
             })}
-    </React.Fragment>
+    </div>
 )
 
 export const AllCryptocons = Template.bind({})
