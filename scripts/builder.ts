@@ -9,7 +9,6 @@ import {
     pretty,
     sort,
     stringify,
-    tagify,
     transform,
     typify,
 } from '.'
@@ -62,10 +61,8 @@ const typeFilePath = path.join(__dirname, '../src/types.ts')
         })
     ).then((exportData) => {
         const sortedExportData = sort(exportData)
-        const tagged = tagify(componentNames)
         const typed = pretty(typify(componentNames))
 
-        fs.writeFile(metaFilePath, tagged)
         fs.writeFile(exportFilePath, sortedExportData)
         fs.writeFile(typeFilePath, typed)
         consolify(consoleData)
