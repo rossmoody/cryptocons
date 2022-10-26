@@ -1,10 +1,10 @@
 import React from 'react'
-import { Cryptocon } from 'src/Cryptocon'
-import { CryptoconBadge } from 'src/CryptoconBadge'
-import { CryptoconLogo } from 'src/CryptoconLogo'
-import { IconProps } from 'src/Icon'
-import { BadgeNames, CryptoconNames, LogoNames } from 'src/types'
 import * as cryptocons from '../components'
+import { Cryptocon } from '../Cryptocon'
+import { CryptoconBadge } from '../CryptoconBadge'
+import { CryptoconLogo } from '../CryptoconLogo'
+import { IconProps } from '../Icon'
+import { BadgeNames, CryptoconNames, LogoNames } from '../types'
 
 export const iconNames = Object.keys(cryptocons) as CryptoconNames[]
 
